@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05F4D26823DCD0B500EC630D /* -1819 Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "-1819 Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05F4D26823DCD0B500EC630D /* 1819 Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1819 Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F4D26B23DCD0B500EC630D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05F4D26D23DCD0B500EC630D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		05F4D26F23DCD0B500EC630D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		05F4D26923DCD0B500EC630D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05F4D26823DCD0B500EC630D /* -1819 Mobile.app */,
+				05F4D26823DCD0B500EC630D /* 1819 Mobile.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,7 +91,6 @@
 				B761AB7D3E6E4C8D15F4175D /* Pods--1819 Mobile.debug.xcconfig */,
 				7B150D7643A4DE08FE71DE2D /* Pods--1819 Mobile.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -114,7 +113,7 @@
 			);
 			name = "-1819 Mobile";
 			productName = "-1819 Mobile";
-			productReference = 05F4D26823DCD0B500EC630D /* -1819 Mobile.app */;
+			productReference = 05F4D26823DCD0B500EC630D /* 1819 Mobile.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -366,7 +365,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.holschuh.-1819-Mobile";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "1819 Mobile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -385,7 +384,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.holschuh.-1819-Mobile";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "1819 Mobile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
