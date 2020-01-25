@@ -1,0 +1,6 @@
+framework module Pods__1819_Mobile {
+  umbrella header "Pods--1819 Mobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
