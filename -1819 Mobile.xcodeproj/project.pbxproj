@@ -67,14 +67,30 @@
 			children = (
 				05F4D26B23DCD0B500EC630D /* AppDelegate.swift */,
 				05F4D26D23DCD0B500EC630D /* SceneDelegate.swift */,
-				05F4D26F23DCD0B500EC630D /* ViewController.swift */,
-				05F4D27123DCD0B500EC630D /* Main.storyboard */,
+				05F4D28323DECCA000EC630D /* Controller */,
+				05F4D28223DECC5700EC630D /* View */,
 				05F4D27723DCD0B700EC630D /* Assets.xcassets */,
 				05F4D27923DCD0B700EC630D /* LaunchScreen.storyboard */,
 				05F4D27C23DCD0B700EC630D /* Info.plist */,
 				05F4D27423DCD0B500EC630D /* _1819_Mobile.xcdatamodeld */,
 			);
 			path = "-1819 Mobile";
+			sourceTree = "<group>";
+		};
+		05F4D28223DECC5700EC630D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05F4D27123DCD0B500EC630D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		05F4D28323DECCA000EC630D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				05F4D26F23DCD0B500EC630D /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		31872226C1EC82BDDA1F3C92 /* Frameworks */ = {
