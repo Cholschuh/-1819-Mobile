@@ -13,10 +13,15 @@ class menuItems {
     
     func getData() -> [menuItem] {
         var array: [menuItem] = [menuItem] ()
+        // needs two viewcontrollers
         let menuItem1 = menuItem(text: "Maps")
+        //Needs three viewcontrollers
         let menuItem2 = menuItem(text: "Building Information")
+        //Needs one view controller Will link to one View contoller form Buidling Information
         let menuItem3 = menuItem(text: "Beacon Discovery")
+        //Needs One view Controller
         let menuItem4 = menuItem(text: "Check-in Pre-registation")
+        // Needs One View Controller 
         let menuItem5 = menuItem(text: "Settings")
         
         array.append(menuItem1)
