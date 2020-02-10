@@ -9,7 +9,7 @@
 import UIKit
 import KontaktSDK
 
-class ViewController: UIViewController {
+class NavigationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
