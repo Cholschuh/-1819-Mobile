@@ -13,22 +13,13 @@ class NavigationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view
-        //navigationController?.setNavigationBarHidden(true, animated: true)
         arrayOfMenuItems = menuItems().getData()
         tableView.reloadData()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        
-        //navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
+    @IBOutlet weak var tableView: UITableView!
     var arrayOfMenuItems:[menuItem] = [menuItem]()
     var currentIndex: Int = 0
-    
-    @IBOutlet weak var tableView: UITableView!
-    
 }
 extension NavigationViewController: UITableViewDataSource, UITableViewDelegate{
     
@@ -59,7 +50,7 @@ extension NavigationViewController: UITableViewDataSource, UITableViewDelegate{
         case  "Building Information":
             self.performSegue(withIdentifier: "goToBuildingInfo", sender: self)
         case "Beacon Discovery":
-            
+            //Check to see if Location Authorization has been granted and displays the correct segue
             switch KTKBeaconManager.locationAuthorizationStatus(){
             case .notDetermined, .denied, .restricted:
                 self.performSegue(withIdentifier: "goToLocServicesReq", sender: self)
@@ -72,9 +63,7 @@ extension NavigationViewController: UITableViewDataSource, UITableViewDelegate{
             self.performSegue(withIdentifier: "goToCheckin", sender: self)
         case "Settings":
             self.performSegue(withIdentifier: "goToSettings", sender: self)
-        case .none:
-            return
-        case .some(_):
+        case .none, .some(_) :
             return
         }
     }
