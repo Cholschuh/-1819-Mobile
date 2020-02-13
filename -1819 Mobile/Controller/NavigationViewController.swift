@@ -10,7 +10,7 @@ import UIKit
 import KontaktSDK
 
 class NavigationViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
@@ -21,12 +21,12 @@ class NavigationViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         
-       //navigationController?.setNavigationBarHidden(false, animated: true)
+        //navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     var arrayOfMenuItems:[menuItem] = [menuItem]()
     var currentIndex: Int = 0
-
+    
     @IBOutlet weak var tableView: UITableView!
     
 }
@@ -55,20 +55,23 @@ extension NavigationViewController: UITableViewDataSource, UITableViewDelegate{
         switch selectedItemName{
             
         case "Maps":
-        self.performSegue(withIdentifier: "goToMaps", sender: self)
-            print("Maps")
+            self.performSegue(withIdentifier: "goToMaps", sender: self)
         case  "Building Information":
             self.performSegue(withIdentifier: "goToBuildingInfo", sender: self)
-            print("Building Information")
         case "Beacon Discovery":
-            self.performSegue(withIdentifier: "goToBeaconDiscovey", sender: self)
-            print("Beacon Discovery")
+            
+            switch KTKBeaconManager.locationAuthorizationStatus(){
+            case .notDetermined, .denied, .restricted:
+                self.performSegue(withIdentifier: "goToLocServicesReq", sender: self)
+            case .authorizedAlways, .authorizedWhenInUse:
+                self.performSegue(withIdentifier: "goToBeaconDiscovey", sender: self)
+            @unknown default:
+                print("error")
+            }
         case "Check-in Pre-registation":
             self.performSegue(withIdentifier: "goToCheckin", sender: self)
-            print("Check-in Pre-registation")
         case "Settings":
             self.performSegue(withIdentifier: "goToSettings", sender: self)
-            print("Settings")
         case .none:
             return
         case .some(_):
