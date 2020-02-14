@@ -30,26 +30,18 @@ class LocationAuthViewController: UIViewController {
         beaconManager.requestLocationAlwaysAuthorization()
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
-extension LocationAuthViewController: KTKBeaconManagerDelegate {
+extension LocationAuthViewController: KTKBeaconManagerDelegate, CLLocationManagerDelegate {
     
     func beaconManager(_ manager: KTKBeaconManager, didChangeLocationAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .authorizedAlways {
+        if status == .authorizedAlways
+    {
             // When status changes to CLAuthorizationStatus.authorizedAlways
             // e.g. after calling beaconManager.requestLocationAlwaysAuthorization()
             // we can start region monitoring from here
-            
+            print("Hello")
+            //self.performSegue(withIdentifier: "goToBeaconDiscovey", sender: self)
         }
-        
     }
+    
 }

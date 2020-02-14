@@ -13,34 +13,19 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     
-   
-    
-    var usersFullName : String?
-    var usersEmailAddress: String?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    func getUserData(){
-        
-        //Validation needed for Email 
-        usersFullName = nameTxt.text ?? "No name given"
-        usersEmailAddress = emailTxt.text ?? "No email given"
-//        if nameTxt.hasText {
-//            usersFullName = nameTxt.text
-//        }
-        
-    }
 
     @IBAction func preRegisterBtn(_ sender: UIButton) {
-        getUserData()
-        showMailComposer()
+        let usersFullName = nameTxt.text ?? "No name given"
+        let usersEmail = emailTxt.text ?? "No email given"
+        showMailComposer(usersFN: usersFullName, usersPrefEmail: usersEmail)
     }
-    func showMailComposer(){
+    func showMailComposer(usersFN: String, usersPrefEmail: String){
             guard MFMailComposeViewController.canSendMail() else {
                 print("Email is not supported on this device")
                 return
@@ -48,8 +33,8 @@ class RegistrationViewController: UIViewController {
             let composer =  MFMailComposeViewController()
             composer.mailComposeDelegate = self
             composer.setToRecipients(["Chris.csrstaff@gmail.com"])
-            composer.setSubject("\(usersFullName!)'s Pre-registation request")
-            composer.setMessageBody("It works! See See. My prefered email is \(usersEmailAddress!)", isHTML: false)
+            composer.setSubject("\(usersFN)'s Pre-registation request")
+            composer.setMessageBody("It works! See See. My prefered email is \(usersPrefEmail)", isHTML: false)
             present(composer, animated: true)
         }
     
