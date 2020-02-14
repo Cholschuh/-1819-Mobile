@@ -17,6 +17,10 @@ class LocationAuthViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        //self.dismiss(animated: false, completion: nil)
+    }
+    
     // initialize beacon manager
     var beaconManager : KTKBeaconManager!
     
