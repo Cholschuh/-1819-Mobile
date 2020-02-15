@@ -16,14 +16,14 @@ class BeaconDiscoveryViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Removes Previous View from stack if seguing from AuthReq Controller
+        ///Removes Previous View from stack if seguing from AuthReq Controller
         if seguedFromAuthReq{
             removePreviousViewControllerFromStack()
             seguedFromAuthReq = false
         }
         
         
-        // Sets Secure Beacon
+        /// Sets Secure Beacon
         beaconManager = KTKBeaconManager(delegate: self)
         
         let mySecureProximityUuid = UUID(uuidString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
@@ -38,7 +38,9 @@ class BeaconDiscoveryViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Set the BeaconDiscoveryViewController Bool varible (seguedFromAuthReq) to True when seguing to the controller. Used to dismiss previous this viewController from the stack after segue is preformed
+        ///Set the BeaconDiscoveryViewController Bool varible (seguedFromAuthReq) to True
+        ///when seguing to the controller. Used to dismiss previous this viewController from the
+        /// stack after segue is preformed
         if segue.identifier == "goToAuthReq" {
             let destinationVC = segue.destination as! LocationAuthViewController
             destinationVC.seguedFromBeaconDiscovReq = true
@@ -46,7 +48,7 @@ class BeaconDiscoveryViewController: UIViewController{
     }
     
     func removePreviousViewControllerFromStack(){
-        //Removes Previous View From Stack
+        ///Removes Previous View From Stack
         var viewControllers = navigationController?.viewControllers
         let viewCount = viewControllers!.count
         print (viewCount)
@@ -70,29 +72,29 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
         }
     }
     func beaconManager(_ manager: KTKBeaconManager, didStartMonitoringFor region: KTKBeaconRegion) {
-        // Do something when monitoring for a particular
-        // region is successfully initiated
+        /// Do something when monitoring for a particular
+        /// region is successfully initiated
         print("Monitoring for predfined Region")
         
     }
     
     func beaconManager(_ manager: KTKBeaconManager, didEnter region: KTKBeaconRegion) {
-        // Decide what to do when a user enters a range of your region; usually used
-        // for triggering a local notification and/or starting a beacon ranging
+        /// Decide what to do when a user enters a range of your region; usually used
+        /// for triggering a local notification and/or starting a beacon ranging
         print("You've enterd my region of beacons")
         //beaconManager.startRangingBeacons(in: region)
         manager.startRangingBeacons(in: region)
     }
     
     func beaconManager(_ manager: KTKBeaconManager, didExitRegion region: KTKBeaconRegion) {
-        // Decide what to do when a user exits a range of your region; usually used
-        // for triggering a local notification and stoping a beacon ranging
+        /// Decide what to do when a user exits a range of your region; usually used
+        /// for triggering a local notification and stoping a beacon ranging
         print("You've left my beacon region")
         manager.stopRangingBeacons(in: region)
     }
     
     func beaconManager(_ manager: KTKBeaconManager, didRangeBeacons beacons: [CLBeacon], in region: KTKBeaconRegion) {
-        // if beacons allow the the immediate beacon change the UI based on its color value, name, and promimity infomation.
+        /// if beacons allow the the immediate beacon change the UI based on its color value, name, and promimity infomation.
         if beacons.count > 0 {
             let nearestBeacon = beacons.first!
             

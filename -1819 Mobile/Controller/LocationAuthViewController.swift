@@ -21,15 +21,17 @@ class LocationAuthViewController: UIViewController, KTKBeaconManagerDelegate{
         }
     }
     
-    // initialize beacon manager
+    /// initialize beacon manager
     var beaconManager : KTKBeaconManager!
     @IBAction func enableLocAuth(_ sender: UIButton) {
-        // initialize beacon manager and request location services.
+        /// initialize beacon manager and request location services.
         beaconManager = KTKBeaconManager(delegate: self)
         beaconManager.requestLocationAlwaysAuthorization()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Set the BeaconDiscoveryViewController Bool varible (seguedFromAuthReq) to True when seguing to the controller. Used to dismiss previous this viewController from the stack after segue is preformed
+        ///Set the BeaconDiscoveryViewController Bool varible (seguedFromAuthReq) to True
+        ///when seguing to the controller. Used to dismiss previous this viewController from the
+        /// stack after segue is preformed
         if segue.identifier == "goToBeaconDiscovery" {
             let destinationVC = segue.destination as! BeaconDiscoveryViewController
             destinationVC.seguedFromAuthReq = true
@@ -37,7 +39,7 @@ class LocationAuthViewController: UIViewController, KTKBeaconManagerDelegate{
     }
     
     func removePreviousViewControllerFromStack(){
-        //Removes Previous View From Stack
+        ///Removes Previous View From Stack
         var viewControllers = navigationController?.viewControllers
         let viewCount = viewControllers!.count
         print (viewCount)

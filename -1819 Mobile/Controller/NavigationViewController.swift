@@ -50,7 +50,7 @@ extension NavigationViewController: UITableViewDataSource, UITableViewDelegate{
         case  "Building Information":
             self.performSegue(withIdentifier: "goToBuildingInfo", sender: self)
         case "Beacon Discovery":
-            //Check to see if Location Authorization has been granted and displays the correct segue
+            ///Check to see if Location Authorization has been granted and displays the correct segue
             switch KTKBeaconManager.locationAuthorizationStatus(){
             case .notDetermined, .denied, .restricted:
                 self.performSegue(withIdentifier: "goToLocServicesReq", sender: self)
