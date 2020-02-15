@@ -62,14 +62,14 @@
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemCell" id="Lk4-kJ-UoX" customClass="menuItemCell" customModule="_819_Mobile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="45.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="45.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lk4-kJ-UoX" id="SFQ-gI-HGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icr-Zj-Ic7">
-                                                    <rect key="frame" x="320" y="10.999999999999998" width="44" height="23.333333333333329"/>
+                                                    <rect key="frame" x="320" y="11.000000000000002" width="44" height="23.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -260,28 +260,30 @@
         <!--Beacon Discovery-->
         <scene sceneID="AnS-PH-fbo">
             <objects>
-                <viewController title="Beacon Discovery" id="hB5-v5-IcW" sceneMemberID="viewController">
+                <viewController title="Beacon Discovery" id="hB5-v5-IcW" customClass="BeaconDiscoveryViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mq0-2j-4YY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Discovery Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-qj-QmM">
-                                <rect key="frame" x="90.666666666666686" y="501" width="233" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orca" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-A2-ozu" userLabel="backgroundImg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Discovery Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-qj-QmM">
+                                <rect key="frame" x="90.666666666666686" y="437.66666666666669" width="233" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="RSo-A2-ozu" firstAttribute="trailing" secondItem="Mq0-2j-4YY" secondAttribute="trailing" id="4gC-ft-I6m"/>
-                            <constraint firstItem="QPx-qj-QmM" firstAttribute="centerX" secondItem="Mq0-2j-4YY" secondAttribute="centerX" id="Mzg-xS-NF9"/>
+                            <constraint firstItem="QPx-qj-QmM" firstAttribute="centerX" secondItem="Mq0-2j-4YY" secondAttribute="centerX" id="BwZ-KW-dkT"/>
+                            <constraint firstItem="QPx-qj-QmM" firstAttribute="centerY" secondItem="Mq0-2j-4YY" secondAttribute="centerY" id="M2l-kI-qBH"/>
                             <constraint firstItem="RSo-A2-ozu" firstAttribute="top" secondItem="Mq0-2j-4YY" secondAttribute="top" id="WDA-ob-bBt"/>
                             <constraint firstAttribute="bottom" secondItem="RSo-A2-ozu" secondAttribute="bottom" id="WNz-rf-m4s"/>
-                            <constraint firstItem="QPx-qj-QmM" firstAttribute="top" secondItem="xv4-Gl-XMQ" secondAttribute="top" constant="413" id="dZ9-UM-nRf"/>
                             <constraint firstItem="RSo-A2-ozu" firstAttribute="leading" secondItem="Mq0-2j-4YY" secondAttribute="leading" id="kWT-dg-SPP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xv4-Gl-XMQ"/>

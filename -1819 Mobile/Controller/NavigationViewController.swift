@@ -54,10 +54,8 @@ extension NavigationViewController: UITableViewDataSource, UITableViewDelegate{
             switch KTKBeaconManager.locationAuthorizationStatus(){
             case .notDetermined, .denied, .restricted:
                 self.performSegue(withIdentifier: "goToLocServicesReq", sender: self)
-                print(".notDetermined, .denied, .restricted")
             case .authorizedAlways, .authorizedWhenInUse:
                 self.performSegue(withIdentifier: "goToBeaconDiscovey", sender: self)
-                print(".authorizedAlways, .authorizedWhenInUse")
             @unknown default:
                 print("@unknown default")
             }
