@@ -9,20 +9,17 @@
 import UIKit
 import KontaktSDK
 
-class LocationAuthViewController: UIViewController {
+class LocationAuthViewController: UIViewController, KTKBeaconManagerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        //self.dismiss(animated: false, completion: nil)
-    }
     
     // initialize beacon manager
     var beaconManager : KTKBeaconManager!
+
     
     @IBAction func enableLocAuth(_ sender: UIButton) {
         // initialize beacon manager
@@ -31,16 +28,11 @@ class LocationAuthViewController: UIViewController {
     }
     
 }
-extension LocationAuthViewController: KTKBeaconManagerDelegate, CLLocationManagerDelegate {
+extension LocationAuthViewController{
     
     func beaconManager(_ manager: KTKBeaconManager, didChangeLocationAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .authorizedAlways
-    {
-            // When status changes to CLAuthorizationStatus.authorizedAlways
-            // e.g. after calling beaconManager.requestLocationAlwaysAuthorization()
-            // we can start region monitoring from here
-            print("Hello")
-            //self.performSegue(withIdentifier: "goToBeaconDiscovey", sender: self)
+        if status == .authorizedAlways || status == .authorizedWhenInUse{
+            self.performSegue(withIdentifier: "goToBeaconDiscovery", sender:self)
         }
     }
     

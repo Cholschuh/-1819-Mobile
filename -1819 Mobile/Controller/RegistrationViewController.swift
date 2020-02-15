@@ -9,10 +9,11 @@
 import UIKit
 import MessageUI
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController{
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     
+    var messageSent: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +38,9 @@ class RegistrationViewController: UIViewController {
             composer.setMessageBody("It works! See See. My prefered email is \(usersPrefEmail)", isHTML: false)
             present(composer, animated: true)
         }
-    
-    
 
 }
-extension RegistrationViewController: MFMailComposeViewControllerDelegate , UITextFieldDelegate{
+extension RegistrationViewController: MFMailComposeViewControllerDelegate, UITextFieldDelegate{
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if let error = error {
@@ -53,10 +52,8 @@ extension RegistrationViewController: MFMailComposeViewControllerDelegate , UITe
                 print("Cancelled")
             case .failed:
                 print("Failed to send")
-            case .saved:
-                print("Saved")
-                case .sent:
-                print("Sent!")
+            case .saved, .sent:
+                print("Sent")
             default:
                 print("Not accounted for")
             }
