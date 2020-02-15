@@ -17,6 +17,7 @@ class RegistrationViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ///calls extension functions to dismiss keyboard when textfield looses focus
          self.setupHideKeyboardOnTap()
     }
 
