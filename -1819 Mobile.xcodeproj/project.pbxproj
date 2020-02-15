@@ -10,6 +10,9 @@
 		0531216023F12728008E6695 /* menuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531215F23F12728008E6695 /* menuItem.swift */; };
 		0531216223F12867008E6695 /* menuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531216123F12867008E6695 /* menuItems.swift */; };
 		053FF77923F44C4400CB4BED /* menuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053FF77823F44C4400CB4BED /* menuItemCell.swift */; };
+		05B49DF423F8679A0048CE9B /* coreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49DF323F8679A0048CE9B /* coreDataHelper.swift */; };
+		05B49DF823F869750048CE9B /* VisitedRoomsMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49DF623F869750048CE9B /* VisitedRoomsMO+CoreDataClass.swift */; };
+		05B49DF923F869750048CE9B /* VisitedRoomsMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49DF723F869750048CE9B /* VisitedRoomsMO+CoreDataProperties.swift */; };
 		05DB389A23F51A27008A4652 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DB389923F51A27008A4652 /* SettingsViewController.swift */; };
 		05DB389C23F51BAD008A4652 /* LocationAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DB389B23F51BAD008A4652 /* LocationAuthViewController.swift */; };
 		05DB389E23F51C37008A4652 /* BeaconDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DB389D23F51C37008A4652 /* BeaconDiscoveryViewController.swift */; };
@@ -29,6 +32,9 @@
 		0531215F23F12728008E6695 /* menuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItem.swift; sourceTree = "<group>"; };
 		0531216123F12867008E6695 /* menuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItems.swift; sourceTree = "<group>"; };
 		053FF77823F44C4400CB4BED /* menuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItemCell.swift; sourceTree = "<group>"; };
+		05B49DF323F8679A0048CE9B /* coreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataHelper.swift; sourceTree = "<group>"; };
+		05B49DF623F869750048CE9B /* VisitedRoomsMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisitedRoomsMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		05B49DF723F869750048CE9B /* VisitedRoomsMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisitedRoomsMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		05DB389923F51A27008A4652 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		05DB389B23F51BAD008A4652 /* LocationAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAuthViewController.swift; sourceTree = "<group>"; };
 		05DB389D23F51C37008A4652 /* BeaconDiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconDiscoveryViewController.swift; sourceTree = "<group>"; };
@@ -63,9 +69,12 @@
 		0531216323F12BA6008E6695 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				05B49DF623F869750048CE9B /* VisitedRoomsMO+CoreDataClass.swift */,
+				05B49DF723F869750048CE9B /* VisitedRoomsMO+CoreDataProperties.swift */,
 				0531215F23F12728008E6695 /* menuItem.swift */,
 				053FF77823F44C4400CB4BED /* menuItemCell.swift */,
 				05FA2EDF23F65671003460DD /* validation.swift */,
+				05B49DF323F8679A0048CE9B /* coreDataHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,6 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				05F4D27023DCD0B500EC630D /* NavigationViewController.swift in Sources */,
+				05B49DF923F869750048CE9B /* VisitedRoomsMO+CoreDataProperties.swift in Sources */,
+				05B49DF423F8679A0048CE9B /* coreDataHelper.swift in Sources */,
 				05F4D26C23DCD0B500EC630D /* AppDelegate.swift in Sources */,
 				05FA2EE023F65671003460DD /* validation.swift in Sources */,
 				05F4D27623DCD0B500EC630D /* _1819_Mobile.xcdatamodeld in Sources */,
@@ -277,6 +288,7 @@
 				0531216223F12867008E6695 /* menuItems.swift in Sources */,
 				05DB389A23F51A27008A4652 /* SettingsViewController.swift in Sources */,
 				05DB389E23F51C37008A4652 /* BeaconDiscoveryViewController.swift in Sources */,
+				05B49DF823F869750048CE9B /* VisitedRoomsMO+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

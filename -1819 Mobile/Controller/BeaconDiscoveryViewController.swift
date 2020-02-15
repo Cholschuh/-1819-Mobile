@@ -11,9 +11,18 @@ import KontaktSDK
 
 class BeaconDiscoveryViewController: UIViewController{
     var beaconManager : KTKBeaconManager!
+    var seguedFromAuthReq: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Removes Previous View from stack if seguing from AuthReq Controller
+        if seguedFromAuthReq{
+            removePreviousViewControllerFromStack()
+            seguedFromAuthReq = false
+        }
+        
+        
         // Sets Secure Beacon
         beaconManager = KTKBeaconManager(delegate: self)
         
@@ -27,16 +36,37 @@ class BeaconDiscoveryViewController: UIViewController{
             print("Something went wrong")
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Set the BeaconDiscoveryViewController Bool varible (seguedFromAuthReq) to True when seguing to the controller. Used to dismiss previous this viewController from the stack after segue is preformed
+        if segue.identifier == "goToAuthReq" {
+            let destinationVC = segue.destination as! LocationAuthViewController
+            destinationVC.seguedFromBeaconDiscovReq = true
+        }
+    }
+    
+    func removePreviousViewControllerFromStack(){
+        //Removes Previous View From Stack
+        var viewControllers = navigationController?.viewControllers
+        let viewCount = viewControllers!.count
+        print (viewCount)
+        if viewCount > 0 {
+            viewControllers?.remove(at: viewCount - 2)
+            navigationController?.setViewControllers(viewControllers!, animated: false)
+        }
+    }
+
 }
 
 extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
     
     func beaconManager(_ manager: KTKBeaconManager, didChangeLocationAuthorizationStatus status: CLAuthorizationStatus) {
-//        if status == .authorizedAlways || status == .authorizedWhenInUse{
-//        }
+        //        if status == .authorizedAlways || status == .authorizedWhenInUse{
+        //        }
         if status == .denied || status == .notDetermined{
-            //self.performSegue(withIdentifier: "", sender:self)
+            self.performSegue(withIdentifier: "goToAuthReq", sender:self)
             print("BeaconStatusChanged")
+            
         }
     }
     func beaconManager(_ manager: KTKBeaconManager, didStartMonitoringFor region: KTKBeaconRegion) {
@@ -72,13 +102,12 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
                 manager.stopRangingBeacons(in: region)
                 break
             case .far:
-                //print("Far \(beaconNamesByMinor              [nearestBeacon.minor.intValue]!)")
+                //print("far proximty \(nearestBeacon.ktk_minor) \(nearestBeacon.ktk_major)")
                 break
             case .near:
-                //print("Near \(beaconNamesByMinor[nearestBeacon.minor.intValue]!)")
+               //print("close proximty \(nearestBeacon.ktk_minor) \(nearestBeacon.ktk_major)")
                 break
             case .unknown:
-                //print("Unknown \(beaconNamesByMinor[nearestBeacon.minor.intValue]!)")
                 break
             @unknown default:
                 //print("Error")
