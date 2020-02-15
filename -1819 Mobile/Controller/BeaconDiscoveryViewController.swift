@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import KontaktSDK
 
-class BeaconDiscoveryViewController: UIViewController {
+class BeaconDiscoveryViewController: UIViewController, KTKBeaconManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +17,16 @@ class BeaconDiscoveryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var beaconManager : KTKBeaconManager!
+    
+}
+extension BeaconDiscoveryViewController{
+    
+    func beaconManager(_ manager: KTKBeaconManager, didChangeLocationAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .denied || status == .notDetermined{
+            //self.performSegue(withIdentifier: "", sender:self)
+            print("BeaconStatusChanged")
+        }
     }
-    */
-
+    
 }
