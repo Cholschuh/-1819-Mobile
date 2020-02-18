@@ -49,7 +49,7 @@ class RegistrationViewController: UIViewController{
             print("Email is not supported on this device")
             return
         }
-        var messageBody: String = "Hi my name is \(usersFN). I am reaching out to you today as I would like to pre-registered for the check-in process at 1819."
+        var messageBody: String = "Hi my name is \(usersFN). I am reaching out to you today as I would like to pre-registered for the check-in process at 1819. "
         if usersPrefEmail == "NA"{
             messageBody.append("Please use the email address I am sending from as my prefered email for this registration.")
         }else {

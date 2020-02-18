@@ -42,7 +42,6 @@ class LocationAuthViewController: UIViewController, KTKBeaconManagerDelegate{
         ///Removes Previous View From Stack
         var viewControllers = navigationController?.viewControllers
         let viewCount = viewControllers!.count
-        print (viewCount)
         if viewCount > 0 {
             viewControllers?.remove(at: viewCount - 2)
             navigationController?.setViewControllers(viewControllers!, animated: false)
