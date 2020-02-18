@@ -32,6 +32,9 @@
 		05FC58F623FBAA7C00019129 /* RoomsMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC58F023FBAA7C00019129 /* RoomsMO+CoreDataClass.swift */; };
 		05FC58F723FBAA7C00019129 /* RoomsMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC58F123FBAA7C00019129 /* RoomsMO+CoreDataProperties.swift */; };
 		05FC58FA23FBADE800019129 /* FloorAndRoomData.json in Resources */ = {isa = PBXBuildFile; fileRef = 05FC58F923FBADE800019129 /* FloorAndRoomData.json */; };
+		05FC58FC23FBAFE200019129 /* floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC58FB23FBAFE200019129 /* floor.swift */; };
+		05FC58FE23FBB03B00019129 /* photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC58FD23FBB03B00019129 /* photo.swift */; };
+		05FC590023FBB08400019129 /* room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC58FF23FBB08400019129 /* room.swift */; };
 		77BAD09BDB78CF5205D59B51 /* Pods__1819_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697D436175F2488C48BDE1F7 /* Pods__1819_Mobile.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		05FC58F023FBAA7C00019129 /* RoomsMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomsMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		05FC58F123FBAA7C00019129 /* RoomsMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomsMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		05FC58F923FBADE800019129 /* FloorAndRoomData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FloorAndRoomData.json; sourceTree = "<group>"; };
+		05FC58FB23FBAFE200019129 /* floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floor.swift; sourceTree = "<group>"; };
+		05FC58FD23FBB03B00019129 /* photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photo.swift; sourceTree = "<group>"; };
+		05FC58FF23FBB08400019129 /* room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = room.swift; sourceTree = "<group>"; };
 		697D436175F2488C48BDE1F7 /* Pods__1819_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__1819_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B150D7643A4DE08FE71DE2D /* Pods--1819 Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods--1819 Mobile.release.xcconfig"; path = "Target Support Files/Pods--1819 Mobile/Pods--1819 Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		B761AB7D3E6E4C8D15F4175D /* Pods--1819 Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods--1819 Mobile.debug.xcconfig"; path = "Target Support Files/Pods--1819 Mobile/Pods--1819 Mobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 				053FF77823F44C4400CB4BED /* menuItemCell.swift */,
 				05FA2EDF23F65671003460DD /* validationHelper.swift */,
 				05B49DF323F8679A0048CE9B /* coreDataHelper.swift */,
+				05FC590123FBB0CB00019129 /* jsonDecodingModels */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +176,16 @@
 				05B49DF723F869750048CE9B /* VisitedRoomsMO+CoreDataProperties.swift */,
 			);
 			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		05FC590123FBB0CB00019129 /* jsonDecodingModels */ = {
+			isa = PBXGroup;
+			children = (
+				05FC58FB23FBAFE200019129 /* floor.swift */,
+				05FC58FD23FBB03B00019129 /* photo.swift */,
+				05FC58FF23FBB08400019129 /* room.swift */,
+			);
+			path = jsonDecodingModels;
 			sourceTree = "<group>";
 		};
 		31872226C1EC82BDDA1F3C92 /* Frameworks */ = {
@@ -310,15 +327,18 @@
 				05FC58F323FBAA7C00019129 /* FloorsMO+CoreDataProperties.swift in Sources */,
 				05FC58F523FBAA7C00019129 /* PhotosMO+CoreDataProperties.swift in Sources */,
 				05F4D26C23DCD0B500EC630D /* AppDelegate.swift in Sources */,
+				05FC58FC23FBAFE200019129 /* floor.swift in Sources */,
 				05FA2EE023F65671003460DD /* validationHelper.swift in Sources */,
 				05F4D27623DCD0B500EC630D /* _1819_Mobile.xcdatamodeld in Sources */,
 				053FF77923F44C4400CB4BED /* menuItemCell.swift in Sources */,
+				05FC590023FBB08400019129 /* room.swift in Sources */,
 				0531216023F12728008E6695 /* menuItem.swift in Sources */,
 				05FA2EDE23F5E4F9003460DD /* RegistrationViewController.swift in Sources */,
 				05FC58F423FBAA7C00019129 /* PhotosMO+CoreDataClass.swift in Sources */,
 				05F4D26E23DCD0B500EC630D /* SceneDelegate.swift in Sources */,
 				05DB389C23F51BAD008A4652 /* LocationAuthViewController.swift in Sources */,
 				0531216223F12867008E6695 /* menuItems.swift in Sources */,
+				05FC58FE23FBB03B00019129 /* photo.swift in Sources */,
 				05FC58F723FBAA7C00019129 /* RoomsMO+CoreDataProperties.swift in Sources */,
 				05FC58F223FBAA7C00019129 /* FloorsMO+CoreDataClass.swift in Sources */,
 				05DB389A23F51A27008A4652 /* SettingsViewController.swift in Sources */,
