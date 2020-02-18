@@ -31,6 +31,7 @@
 		05FC58F523FBAA7C00019129 /* PhotosMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC58EF23FBAA7C00019129 /* PhotosMO+CoreDataProperties.swift */; };
 		05FC58F623FBAA7C00019129 /* RoomsMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC58F023FBAA7C00019129 /* RoomsMO+CoreDataClass.swift */; };
 		05FC58F723FBAA7C00019129 /* RoomsMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC58F123FBAA7C00019129 /* RoomsMO+CoreDataProperties.swift */; };
+		05FC58FA23FBADE800019129 /* FloorAndRoomData.json in Resources */ = {isa = PBXBuildFile; fileRef = 05FC58F923FBADE800019129 /* FloorAndRoomData.json */; };
 		77BAD09BDB78CF5205D59B51 /* Pods__1819_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697D436175F2488C48BDE1F7 /* Pods__1819_Mobile.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		05FC58EF23FBAA7C00019129 /* PhotosMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotosMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		05FC58F023FBAA7C00019129 /* RoomsMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomsMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		05FC58F123FBAA7C00019129 /* RoomsMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomsMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		05FC58F923FBADE800019129 /* FloorAndRoomData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FloorAndRoomData.json; sourceTree = "<group>"; };
 		697D436175F2488C48BDE1F7 /* Pods__1819_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__1819_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B150D7643A4DE08FE71DE2D /* Pods--1819 Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods--1819 Mobile.release.xcconfig"; path = "Target Support Files/Pods--1819 Mobile/Pods--1819 Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		B761AB7D3E6E4C8D15F4175D /* Pods--1819 Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods--1819 Mobile.debug.xcconfig"; path = "Target Support Files/Pods--1819 Mobile/Pods--1819 Mobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		0531216423F12BC7008E6695 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				05FC58F923FBADE800019129 /* FloorAndRoomData.json */,
 				0531216123F12867008E6695 /* menuItems.swift */,
 			);
 			path = Data;
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05F4D27B23DCD0B700EC630D /* LaunchScreen.storyboard in Resources */,
+				05FC58FA23FBADE800019129 /* FloorAndRoomData.json in Resources */,
 				05F4D27823DCD0B700EC630D /* Assets.xcassets in Resources */,
 				05F4D27323DCD0B500EC630D /* Main.storyboard in Resources */,
 			);

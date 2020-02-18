@@ -1,0 +1,118 @@
+[{
+    "name": "Floor 1",
+    "mapImage": "Path/to/imagemap",
+    "rooms":[
+        {
+            "name": "1819 Innovation Hub",
+            "roomNumber": "100",
+            "information": "The 1819 Innovation hub is a 100,000 square foot state of the art building that is equipped with the tools and resources needed to foster innovation. Floors one and two consist of mostly creation and collaboration spaces while floors three and four are dedicated to corporate partnerships. The hours are convenient for everyone and the building is accessible by shuttles from UC.",
+            "beaconMinorVal": "102321",
+            "beaconMajorVal": "123123",
+            "photos":[
+                {
+                    "path": "Oranges",
+                    "altText": "This is a photo of Oranges"
+                },
+                {
+                    "path": "Building",
+                    "altText": "This is a photo of a Buidling"
+                },
+                {
+                    "path": "Library",
+                    "altText": "This is a photo of a Library"
+                }
+            ]
+        },
+        {
+            "name": "Makerspace",
+            "roomNumber": "101",
+            "information": "The makerspace is split in to two main areas the Makerspace and the Microfactory. This first area is dedicated more to smaller projects and hardware while the fabrication shop has hardware designed for larger scale projects. The makerspace has tools like Computers with full design suites (AutoDesk, Adobe, etc.), several different types of 3D printers, large format plotters, laser cutters, sewing machines, fabric printers, and much more. Certain tools within the makerspace like laser cutters require certifications and further training to use.",
+            "beaconMinorVal": "102351",
+            "beaconMajorVal": "123253",
+            "photos":[
+                {
+                    "path": "path/to/photo",
+                    "altText": "This is a photo of the 1819 Markerspace"
+                },
+                {
+                    "path": "path/to/photo",
+                    "altText": "This is a photo of the Makerspace's 3D printers "
+                }
+            ]
+        },
+        {
+            "name": "Makerspace Lobby",
+            "roomNumber": "102",
+            "information": "All tools are available for free after registering for the blackboard course and attending an orientation session with the makerspace staff. (Section about the times that classes are available). While the tools themselves are free to use, you must pay for any materials that you use.",
+            "beaconMinorVal": "105351",
+            "beaconMajorVal": "113253",
+            "photos":[
+                {
+                    "path": "path/to/photo",
+                    "altText": "This is a photo of the 1819 Markerspace"
+                },
+                {
+                    "path": "path/to/photo",
+                    "altText": "This is a photo of the Makerspace's 3D printers "
+                }
+            ]
+        },
+        {
+            "name": "Microfactory",
+            "roomNumber": "103",
+            "information": "he Microfactory has tools like a water jet cutter, CNC machine, soldering tools, woodworking equipment, welding tools, general power tools, and much more. Members must go through advanced training before using the Microfactory. Additionally, certain equipment in the fabrication shop can only be operated by makerspace technicians.",
+            "beaconMinorVal": "105391",
+            "beaconMajorVal": "113053",
+            "photos":[
+                {
+                    "path": "path/to/photo",
+                    "altText": "This is a photo of the 1819 Markerspace"
+                },
+                {
+                    "path": "path/to/photo",
+                    "altText": "This is a photo of the Makerspace's 3D printers "
+                }
+            ]
+        }
+    ]
+},
+{
+    "name": "Floor 2",
+    "mapImage": "Path/to/imagemap",
+    "rooms":[
+        {
+            "name": "Room 1 Floor2",
+            "roomNumber": "200",
+            "information": ".....",
+            "beaconMinorVal": "",
+            "beaconMajorVal": "",
+            "photos":[
+                {
+                    "path": "path/to/photo",
+                    "altText": "This is a photo of the room 1"
+                },
+                {
+                    "path": "path/to/photo",
+                    "altText": "This is a photo of the room 1 partner logo"
+                }
+            ]
+        },
+        {
+            "name": "Room2",
+            "roomNumber": "201",
+            "information": "This is Room 2. Here you can .....",
+            "beaconMinorVal": "",
+            "beaconMajorVal": "",
+            "photos":[
+                {
+                    "path": "path/to/photo Room 2",
+                    "altText": "This is a photo of the room 2"
+                },
+                {
+                    "path": "path/to/photo Room 2",
+                    "altText": "This is a photo of the room 2 partner logo "
+                }
+            ]
+        }
+    ]
+}]
