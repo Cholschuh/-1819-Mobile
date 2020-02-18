@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FloorsMO" representedClassName="FloorsMO" syncable="YES">
+        <attribute name="mapImage" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="rawRooms" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="RoomsMO" inverseName="floor" inverseEntity="RoomsMO"/>
+    </entity>
+    <entity name="PhotosMO" representedClassName="PhotosMO" syncable="YES">
+        <attribute name="altText" optional="YES" attributeType="String"/>
+        <attribute name="path" optional="YES" attributeType="String"/>
+        <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoomsMO" inverseName="rawPhotos" inverseEntity="RoomsMO"/>
+    </entity>
+    <entity name="RoomsMO" representedClassName="RoomsMO" syncable="YES">
+        <attribute name="beaconMajorVal" optional="YES" attributeType="String"/>
+        <attribute name="beaconMinorVal" optional="YES" attributeType="String"/>
+        <attribute name="information" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="roomNumber" optional="YES" attributeType="String"/>
+        <relationship name="floor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FloorsMO" inverseName="rawRooms" inverseEntity="FloorsMO"/>
+        <relationship name="rawPhotos" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="PhotosMO" inverseName="room" inverseEntity="PhotosMO"/>
+    </entity>
     <entity name="VisitedRoomsMO" representedClassName="VisitedRoomsMO" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
+        <element name="FloorsMO" positionX="-63" positionY="-9" width="128" height="88"/>
+        <element name="PhotosMO" positionX="-36" positionY="18" width="128" height="88"/>
+        <element name="RoomsMO" positionX="-54" positionY="9" width="128" height="148"/>
         <element name="VisitedRoomsMO" positionX="-63" positionY="-18" width="128" height="58"/>
     </elements>
 </model>
