@@ -13,7 +13,7 @@ import CoreData
 
 extension FloorsMO {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<FloorsMO> {
+    @nonobjc public class func createfetchRequest() -> NSFetchRequest<FloorsMO> {
         return NSFetchRequest<FloorsMO>(entityName: "FloorsMO")
     }
 

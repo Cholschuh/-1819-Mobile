@@ -12,5 +12,7 @@ import CoreData
 
 @objc(RoomsMO)
 public class RoomsMO: NSManagedObject {
-
+    var photos: [PhotosMO]? {
+        return self.rawPhotos?.array as? [PhotosMO]
+    }
 }
