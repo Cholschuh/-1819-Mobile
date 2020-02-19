@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Kontakt.setAPIKey("GqntkJyqoHowcAjaKwOXijUvNAOhlrgh")
+        preloadData()
         return true
     }
     
@@ -77,6 +78,74 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    func preloadData(){
+        //Check to see if the preloadedDataKey is set to True if not then it will upload data and mark key as true.
+        
+        let preloadedDataKey = "didPreloadData"
+        let userDefaults = UserDefaults.standard
+        
+        if userDefaults.bool(forKey: preloadedDataKey) == false {
+            //preload
+            guard let fileUrl = Bundle.main.path(forResource: "FloorAndRoomData", ofType: "json") else {
+                print("Unable to find file, Could not load data.")
+                return
+            }
+            // gets readable URL
+            let dataURL = URL(fileURLWithPath: fileUrl)
+            
+            let backgroundContext = persistentContainer.newBackgroundContext()
+            persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+            
+            backgroundContext.perform {
+                var floors = [floor]()
+                let task = URLSession.shared.dataTask(with: dataURL) { (data, response, error) in
+                    
+                    if let error = error {
+                        print(error.localizedDescription)
+                        return
+                    }
+                    
+                    if let data = data {
+                        //Decodes Json to room objects and stores in the Rooms array of room objets
+                        do {
+                            floors = try JSONDecoder().decode([floor].self, from: data)
+                            for floor in floors{
+                                let floorObj = FloorsMO(context: backgroundContext)
+                                floorObj.name = floor.name
+                                floorObj.mapImage = floor.mapImage
+                                for room in floor.rooms{
+                                    let roomObj = RoomsMO(context: backgroundContext)
+                                    roomObj.name = room.name
+                                    roomObj.roomNumber = room.roomNumber
+                                    roomObj.information = room.information
+                                    roomObj.beaconMajorVal = room.beaconMajorVal
+                                    roomObj.beaconMinorVal = room.beaconMinorVal
+                                    for photo in room.photos{
+                                        let photoObj = PhotosMO(context: backgroundContext)
+                                        photoObj.altText = photo.altText
+                                        photoObj.path = photo.path
+                                        roomObj.addToRawPhotos(photoObj)
+                                    }
+                                    floorObj.addToRawRooms(roomObj)
+                                }
+                            }
+                            try backgroundContext.save()
+                        }catch {
+                            print(error.localizedDescription)
+                        }
+                    }
+                    
+                }
+                task.resume()
+                userDefaults.set(true, forKey: preloadedDataKey)
+            }
+            
+        }else{
+            //print("Data already loaded")
+            
         }
     }
     

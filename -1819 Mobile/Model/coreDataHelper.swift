@@ -84,6 +84,21 @@ class coreDataHelper: NSObject {
     
     //--------Floor<->>Rooms<-->>Photos Methods ------
     
+    
+    class func getFloorObject() -> [FloorsMO] {
+        let context = getContext()
+        var floors: [FloorsMO] = []
+        let fetchRequest: NSFetchRequest<FloorsMO> = FloorsMO.createfetchRequest()
+        let sortDescripter = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescripter]
+        do{
+          floors = try context.fetch(fetchRequest)
+        }catch{
+            print("Could not pull numbers")
+        }
+        return floors
+    }
+    
 //    class func getAllRooms(){
 //
 //        let context = getContext()
