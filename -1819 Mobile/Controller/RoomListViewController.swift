@@ -26,10 +26,10 @@ class RoomListViewController: UIViewController {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        if segue.identifier == "goToRoomDetails" {
-        //            let destinationVC = segue.destination as! RoomDetailsViewController
-        //            destinationVC.roomObj = roomObj
-        //        }
+                if segue.identifier == "goToRoomDetails" {
+                    let destinationVC = segue.destination as! RoomDetailsViewController
+                    destinationVC.roomObj = roomObj
+                }
     }
 }
 extension RoomListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -55,7 +55,7 @@ extension RoomListViewController: UITableViewDataSource, UITableViewDelegate {
         currentIndex = indexPath.row
         roomObj = (floorObj?.rooms?[currentIndex])!
         tableView.deselectRow(at: indexPath, animated: true)
-        //self.performSegue(withIdentifier: "goToRoomDetails", sender: self)
+        self.performSegue(withIdentifier: "goToRoomDetails", sender: self)
     }
     
 }

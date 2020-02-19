@@ -68,32 +68,89 @@
                     <navigationItem key="navigationItem" id="2h4-4R-NGq"/>
                     <connections>
                         <outlet property="tableView" destination="h9S-mz-P48" id="5Gh-ol-ZD2"/>
+                        <segue destination="cK2-8m-BGS" kind="presentation" identifier="goToRoomDetails" id="4B8-S6-EKK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGi-gL-x3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3731.884057971015" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Room Details-->
         <scene sceneID="HwQ-aT-xBs">
             <objects>
-                <viewController id="cK2-8m-BGS" sceneMemberID="viewController">
+                <viewController title="Room Details" id="cK2-8m-BGS" customClass="RoomDetailsViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JbT-Fz-ISE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Orca" translatesAutoresizingMaskIntoConstraints="NO" id="UTO-Sy-InE" userLabel="backgroundImg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orca" translatesAutoresizingMaskIntoConstraints="NO" id="UTO-Sy-InE" userLabel="backgroundImg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gej-DM-yyJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="361"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSi-aE-YVJ">
+                                        <rect key="frame" x="8" y="8" width="47" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissBtn:" destination="cK2-8m-BGS" eventType="touchUpInside" id="8jc-ZV-cGY"/>
+                                        </connections>
+                                    </button>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nfY-fR-f9c">
+                                        <rect key="frame" x="188" y="316" width="39" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </pageControl>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="1fR-yd-qLR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="8K3-0P-GGv"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cK2-8m-BGS" id="wt6-cv-hv9"/>
+                                </connections>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLw-GU-p6G">
+                                <rect key="frame" x="0.0" y="369" width="394" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="ycm-wX-7vu">
+                                <rect key="frame" x="20" y="398" width="374" height="354"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UTO-Sy-InE" firstAttribute="top" secondItem="JbT-Fz-ISE" secondAttribute="top" id="NhV-AM-uoS"/>
+                            <constraint firstItem="UTO-Sy-InE" firstAttribute="leading" secondItem="JbT-Fz-ISE" secondAttribute="leading" id="fBe-Lp-woU"/>
+                            <constraint firstAttribute="bottom" secondItem="UTO-Sy-InE" secondAttribute="bottom" id="nrp-uv-f65"/>
+                            <constraint firstItem="UTO-Sy-InE" firstAttribute="trailing" secondItem="JbT-Fz-ISE" secondAttribute="trailing" id="z5G-1n-xdh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="94b-D1-YO9"/>
                     </view>
+                    <connections>
+                        <outlet property="imgPageControl" destination="nfY-fR-f9c" id="qSI-vb-d3n"/>
+                        <outlet property="imgScrollView" destination="gej-DM-yyJ" id="Xgp-Yk-V7b"/>
+                        <outlet property="roomInfoTextView" destination="ycm-wX-7vu" id="QC3-K9-nsk"/>
+                        <outlet property="roomNameLbl" destination="YLw-GU-p6G" id="Vfb-0d-FeH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rp-mX-mL3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4954" y="501"/>
+            <point key="canvasLocation" x="4953.6231884057979" y="500.89285714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZvH-uN-WEd">
@@ -135,14 +192,14 @@
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemCell" id="Lk4-kJ-UoX" customClass="menuItemCell" customModule="_819_Mobile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="45.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lk4-kJ-UoX" id="SFQ-gI-HGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icr-Zj-Ic7">
-                                                    <rect key="frame" x="320" y="11.000000000000002" width="44" height="23.666666666666671"/>
+                                                    <rect key="frame" x="320" y="11.000000000000002" width="44" height="22.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -532,6 +589,7 @@
     <resources>
         <image name="AuthReqInfoGraphic" width="291.66665649414062" height="291.66665649414062"/>
         <image name="Orca" width="281" height="609"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XjB-vs-h59"/>
