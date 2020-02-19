@@ -20,6 +20,15 @@ class NavigationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var arrayOfMenuItems:[menuItem] = [menuItem]()
     var currentIndex: Int = 0
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToFloorList" {
+            let destinationVC = segue.destination as! FloorListViewController
+            destinationVC.selectedMenuOption = arrayOfMenuItems[currentIndex].text ?? ""
+            
+        }
+    }
+    
 }
 extension NavigationViewController: UITableViewDataSource, UITableViewDelegate{
     
@@ -44,11 +53,10 @@ extension NavigationViewController: UITableViewDataSource, UITableViewDelegate{
         tableView.deselectRow(at: indexPath, animated: true)
         let selectedItemName = arrayOfMenuItems[currentIndex].text
         switch selectedItemName{
-            
         case "Maps":
-            self.performSegue(withIdentifier: "goToMaps", sender: self)
+            self.performSegue(withIdentifier: "goToFloorList", sender: self)
         case  "Building Information":
-            self.performSegue(withIdentifier: "goToBuildingInfo", sender: self)
+            self.performSegue(withIdentifier: "goToFloorList", sender: self)
         case "Beacon Discovery":
             ///Check to see if Location Authorization has been granted and displays the correct segue
             switch KTKBeaconManager.locationAuthorizationStatus(){

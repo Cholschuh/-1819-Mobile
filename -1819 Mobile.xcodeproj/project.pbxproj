@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0517562623FCF4BB004FE6C1 /* floorListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517562523FCF4BB004FE6C1 /* floorListCell.swift */; };
+		0517562823FCF55C004FE6C1 /* roomListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517562723FCF55C004FE6C1 /* roomListCell.swift */; };
+		0517562C23FCF6E5004FE6C1 /* FloorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517562B23FCF6E5004FE6C1 /* FloorListViewController.swift */; };
+		0517562E23FD07C4004FE6C1 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517562D23FD07C4004FE6C1 /* RoomListViewController.swift */; };
 		0531216023F12728008E6695 /* menuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531215F23F12728008E6695 /* menuItem.swift */; };
 		0531216223F12867008E6695 /* menuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531216123F12867008E6695 /* menuItems.swift */; };
 		053FF77923F44C4400CB4BED /* menuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053FF77823F44C4400CB4BED /* menuItemCell.swift */; };
@@ -39,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0517562523FCF4BB004FE6C1 /* floorListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floorListCell.swift; sourceTree = "<group>"; };
+		0517562723FCF55C004FE6C1 /* roomListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roomListCell.swift; sourceTree = "<group>"; };
+		0517562B23FCF6E5004FE6C1 /* FloorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorListViewController.swift; sourceTree = "<group>"; };
+		0517562D23FD07C4004FE6C1 /* RoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
 		0531215F23F12728008E6695 /* menuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItem.swift; sourceTree = "<group>"; };
 		0531216123F12867008E6695 /* menuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItems.swift; sourceTree = "<group>"; };
 		053FF77823F44C4400CB4BED /* menuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItemCell.swift; sourceTree = "<group>"; };
@@ -147,6 +155,8 @@
 			children = (
 				05F4D27123DCD0B500EC630D /* Main.storyboard */,
 				05F4D27923DCD0B700EC630D /* LaunchScreen.storyboard */,
+				0517562523FCF4BB004FE6C1 /* floorListCell.swift */,
+				0517562723FCF55C004FE6C1 /* roomListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +169,8 @@
 				05DB389923F51A27008A4652 /* SettingsViewController.swift */,
 				05DB389D23F51C37008A4652 /* BeaconDiscoveryViewController.swift */,
 				05FA2EDD23F5E4F9003460DD /* RegistrationViewController.swift */,
+				0517562B23FCF6E5004FE6C1 /* FloorListViewController.swift */,
+				0517562D23FD07C4004FE6C1 /* RoomListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,15 +333,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0517562823FCF55C004FE6C1 /* roomListCell.swift in Sources */,
 				05F4D27023DCD0B500EC630D /* NavigationViewController.swift in Sources */,
 				05B49DF923F869750048CE9B /* VisitedRoomsMO+CoreDataProperties.swift in Sources */,
 				05B49DF423F8679A0048CE9B /* coreDataHelper.swift in Sources */,
 				05FC58F323FBAA7C00019129 /* FloorsMO+CoreDataProperties.swift in Sources */,
 				05FC58F523FBAA7C00019129 /* PhotosMO+CoreDataProperties.swift in Sources */,
+				0517562623FCF4BB004FE6C1 /* floorListCell.swift in Sources */,
 				05F4D26C23DCD0B500EC630D /* AppDelegate.swift in Sources */,
 				05FC58FC23FBAFE200019129 /* floor.swift in Sources */,
 				05FA2EE023F65671003460DD /* validationHelper.swift in Sources */,
 				05F4D27623DCD0B500EC630D /* _1819_Mobile.xcdatamodeld in Sources */,
+				0517562E23FD07C4004FE6C1 /* RoomListViewController.swift in Sources */,
+				0517562C23FCF6E5004FE6C1 /* FloorListViewController.swift in Sources */,
 				053FF77923F44C4400CB4BED /* menuItemCell.swift in Sources */,
 				05FC590023FBB08400019129 /* room.swift in Sources */,
 				0531216023F12728008E6695 /* menuItem.swift in Sources */,
