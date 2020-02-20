@@ -39,6 +39,7 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
         for i in 0..<roomPhotosCount {
             let imageView = UIImageView()
             imageView.contentMode = .scaleToFill
+            imageView.isAccessibilityElement = true
             let imageName: String = roomPhotos[i].path ?? ""
             imageView.image = UIImage(named: roomPhotos[i].path ?? "")
             imageView.accessibilityLabel = roomPhotos[i].altText
