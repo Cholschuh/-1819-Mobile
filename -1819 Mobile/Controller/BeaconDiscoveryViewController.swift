@@ -12,6 +12,8 @@ import KontaktSDK
 class BeaconDiscoveryViewController: UIViewController{
     var beaconManager : KTKBeaconManager!
     var seguedFromAuthReq: Bool = false
+    var detectedRoom: RoomsMO?
+    let generator = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,7 @@ class BeaconDiscoveryViewController: UIViewController{
             removePreviousViewControllerFromStack()
             seguedFromAuthReq = false
         }
+        
         
         
         /// Sets Secure Beacon
@@ -44,6 +47,10 @@ class BeaconDiscoveryViewController: UIViewController{
         if segue.identifier == "goToAuthReq" {
             let destinationVC = segue.destination as! LocationAuthViewController
             destinationVC.seguedFromBeaconDiscovReq = true
+        }else if segue.identifier == "goToRoomDetails" {
+            let destinationVC = segue.destination as! RoomDetailsViewController
+            destinationVC.roomObj = detectedRoom
+            
         }
     }
     
@@ -57,7 +64,11 @@ class BeaconDiscoveryViewController: UIViewController{
             navigationController?.setViewControllers(viewControllers!, animated: false)
         }
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
 }
 
 extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
@@ -101,13 +112,25 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
             switch nearestBeacon.proximity{
             case .immediate:
                 print("Nearest Beacon is \(nearestBeacon.ktk_minor) \(nearestBeacon.ktk_major)")
-                manager.stopRangingBeacons(in: region)
+                detectedRoom = try? coreDataHelper.getDetectedRoomWThrow(beaconMajorVal: "123123", beaconMinorVal: "102321")
+                if detectedRoom != nil {
+                    guard let detectedRoomName = detectedRoom?.name else {return}
+                    if !coreDataHelper.roomHasBeenVisited(roomName:
+                        detectedRoomName){
+                        manager.stopRangingBeacons(in: region)
+                        generator.notificationOccurred(.success)
+                        coreDataHelper.recordVisitedLoc(name: detectedRoomName)
+                        self.performSegue(withIdentifier: "goToRoomDetails", sender: self)
+                    }
+                    
+                }
+                
                 break
             case .far:
                 //print("far proximty \(nearestBeacon.ktk_minor) \(nearestBeacon.ktk_major)")
                 break
             case .near:
-               //print("close proximty \(nearestBeacon.ktk_minor) \(nearestBeacon.ktk_major)")
+                //print("close proximty \(nearestBeacon.ktk_minor) \(nearestBeacon.ktk_major)")
                 break
             case .unknown:
                 break

@@ -13,6 +13,9 @@ import CoreData
 
 class coreDataHelper: NSObject {
     
+    enum CoreDataHelperError: Error {
+        case fetchfailed
+    }
     
     
     //provides a context for Appdelegate to the persistent Container
@@ -53,17 +56,17 @@ class coreDataHelper: NSObject {
     
     // Returning an array of VisitedRoomMO Objects fetches all visited room in the VisitedRoomMO data store
     class func fetchAllVisitedRoomsdData() -> [VisitedRoomsMO]{
-            let context = getContext()
-            var results: [VisitedRoomsMO] = []
-            //let fetch = NSFetchRequest<VisitedRoomsMO>(entityName:"VisitedRoomsMO")
-            let fetch = VisitedRoomsMO.createFetchRequest()
-            do{
-                results = try context.fetch(fetch)
-            }catch {
-                print(error.localizedDescription)
-            }
-            return results
+        let context = getContext()
+        var results: [VisitedRoomsMO] = []
+        //let fetch = NSFetchRequest<VisitedRoomsMO>(entityName:"VisitedRoomsMO")
+        let fetch = VisitedRoomsMO.createFetchRequest()
+        do{
+            results = try context.fetch(fetch)
+        }catch {
+            print(error.localizedDescription)
         }
+        return results
+    }
     // returns Bool: Searches roomName to detect with room has already been visited
     class func roomHasBeenVisited(roomName: String) -> Bool {
         let context = getContext()
@@ -79,12 +82,12 @@ class coreDataHelper: NSObject {
         }catch{
             print("What unable to pull data from VisitedRoomsMO entity. Error " + error.localizedDescription)
         }
-    return false
+        return false
     }
     
     //--------Floor<->>Rooms<-->>Photos Methods ------
     
-    
+    //Floors
     class func getFloorObject() -> [FloorsMO] {
         let context = getContext()
         var floors: [FloorsMO] = []
@@ -92,36 +95,69 @@ class coreDataHelper: NSObject {
         let sortDescripter = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescripter]
         do{
-          floors = try context.fetch(fetchRequest)
+            floors = try context.fetch(fetchRequest)
         }catch{
             print("Could not pull numbers")
         }
         return floors
     }
     
-//    class func getAllRooms(){
-//
-//        let context = getContext()
-//        var floorObj: [FloorsMO] = []
-//        //var fetchedResultsController: NSFetchedResultsController<VisitedRoomsMO>!
-//        let request = FloorsMO.createfetchRequest()
-//        let sort = NSSortDescriptor(key: "rawRooms.name", ascending: true)
-//        request.sortDescriptors = [sort]
-//        request.predicate = NSPredicate(format: "floor.name","Floor 1")
-////        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "rawRooms.name", cacheName: nil)
-//        do{
-//
-//            floorObj = try context.fetch(request)
-//            for floor in floorObj{
-//                print(floor.rawRooms)
-//            }
-//        }catch{
-//
-//        }
-////
-//
-//
-//    }
     
+    //Rooms
+    
+    class func getDetectedRoom (beaconMajorVal: String, beaconMinorVal: String) -> RoomsMO{
+        let context = getContext()
+        //var detectedRoom: RoomsMO
+        var roomsResult : [RoomsMO] = []
+        let fetchRequest: NSFetchRequest<RoomsMO> = RoomsMO.fetchRequest()
+        let predicate1 = NSPredicate(format: "beaconMajorVal = %@", beaconMajorVal)
+        let predicate2 = NSPredicate(format: "beaconMinorVal = %@", beaconMinorVal)
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1, predicate2])
+        do{
+            roomsResult = try context.fetch(fetchRequest)
+        }catch {
+            print("Code not find room")
+        }
+        return roomsResult[0]
+    }
+    
+    class func detectedRoomExist (beaconMajorVal: String, beaconMinorVal: String) -> Bool{
+        let context = getContext()
+        //var detectedRoom: RoomsMO
+        var roomsResult : [RoomsMO] = []
+        let fetchRequest: NSFetchRequest<RoomsMO> = RoomsMO.fetchRequest()
+        let predicate1 = NSPredicate(format: "beaconMajorVal = %@", beaconMajorVal)
+        let predicate2 = NSPredicate(format: "beaconMinorVal = %@", beaconMinorVal)
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1, predicate2])
+        do{
+            roomsResult = try context.fetch(fetchRequest)
+            if roomsResult.count > 0{
+                return true
+            }else{
+                print("Results Empty")
+            }
+            
+        }catch {
+            print("Code not find room")
+        }
+        return false
+    }
+    
+    class func getDetectedRoomWThrow (beaconMajorVal: String, beaconMinorVal: String) throws -> RoomsMO{
+           let context = getContext()
+           var detectedRoom: RoomsMO
+           var roomsResult : [RoomsMO] = []
+           let fetchRequest: NSFetchRequest<RoomsMO> = RoomsMO.fetchRequest()
+           let predicate1 = NSPredicate(format: "beaconMajorVal = %@", beaconMajorVal)
+           let predicate2 = NSPredicate(format: "beaconMinorVal = %@", beaconMinorVal)
+           fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1, predicate2])
+           do{
+               roomsResult = try context.fetch(fetchRequest)
+           }catch {
+            throw CoreDataHelperError.fetchfailed
+           }
+            detectedRoom = roomsResult[0]
+            return detectedRoom
+    }
 }
 
