@@ -6,8 +6,8 @@
             "name": "1819 Innovation Hub",
             "roomNumber": "100",
             "information": "The 1819 Innovation hub is a 100,000 square foot state of the art building that is equipped with the tools and resources needed to foster innovation. Floors one and two consist of mostly creation and collaboration spaces while floors three and four are dedicated to corporate partnerships. The hours are convenient for everyone and the building is accessible by shuttles from UC.",
-            "beaconMinorVal": "102321",
-            "beaconMajorVal": "123123",
+            "beaconMinorVal": "46783",
+            "beaconMajorVal": "53036",
             "photos":[
                 {
                     "path": "Oranges",
@@ -27,8 +27,8 @@
             "name": "Makerspace",
             "roomNumber": "101",
             "information": "The makerspace is split in to two main areas the Makerspace and the Microfactory. This first area is dedicated more to smaller projects and hardware while the fabrication shop has hardware designed for larger scale projects. The makerspace has tools like Computers with full design suites (AutoDesk, Adobe, etc.), several different types of 3D printers, large format plotters, laser cutters, sewing machines, fabric printers, and much more. Certain tools within the makerspace like laser cutters require certifications and further training to use.",
-            "beaconMinorVal": "102351",
-            "beaconMajorVal": "123253",
+            "beaconMinorVal": "52989",
+            "beaconMajorVal": "44795",
             "photos":[
                 {
                     "path": "path/to/photo",

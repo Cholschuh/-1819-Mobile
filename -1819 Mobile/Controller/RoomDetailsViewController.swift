@@ -15,6 +15,7 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imgScrollView: UIScrollView!
     @IBOutlet weak var imgPageControl: UIPageControl!
     var roomObj: RoomsMO?
+    var seguedFromBeaconDiscovery: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +25,12 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
             print("Not able to load room object")
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     
     @IBAction func dismissBtn(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
+       self.dismiss(animated: true, completion: nil)
     }
     
     func configureView(roomObj: RoomsMO){
@@ -40,7 +43,6 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
             let imageView = UIImageView()
             imageView.contentMode = .scaleToFill
             imageView.isAccessibilityElement = true
-            let imageName: String = roomPhotos[i].path ?? ""
             imageView.image = UIImage(named: roomPhotos[i].path ?? "")
             imageView.accessibilityLabel = roomPhotos[i].altText
             let xPos = CGFloat(i)*self.view.bounds.size.width

@@ -14,7 +14,9 @@ import CoreData
 class coreDataHelper: NSObject {
     
     enum CoreDataHelperError: Error {
-        case fetchfailed
+        case fetchfailed(error: String)
+        case saveFailed
+        case noRoomFound(resultsFound: Int)
     }
     
     
@@ -27,30 +29,26 @@ class coreDataHelper: NSObject {
     
     
     // Create a record in the VistedRoomMO Entity with the room name
-    class func recordVisitedLoc(name: String)-> Bool{
+    class func recordVisitedLoc(name: String){
         let context = getContext()
         let vistedRooms = VisitedRoomsMO(context: context)
         vistedRooms.name = name
         
         do {
             try context.save()
-            return true
         }catch{
             print(error.localizedDescription)
-            return false
         }
     }
     // Clears all records in the visistedRoomMO data store
-    class func clearAllVisitedLoc () -> Bool{
+    class func clearAllVisitedLoc (){
         let context = getContext()
         let deleteAllRequest = NSBatchDeleteRequest(fetchRequest: VisitedRoomsMO.fetchRequest())
         
         do {
             try context.execute(deleteAllRequest)
-            return true
         }catch{
             print (error.localizedDescription)
-            return false
         }
     }
     
@@ -105,21 +103,6 @@ class coreDataHelper: NSObject {
     
     //Rooms
     
-    class func getDetectedRoom (beaconMajorVal: String, beaconMinorVal: String) -> RoomsMO{
-        let context = getContext()
-        //var detectedRoom: RoomsMO
-        var roomsResult : [RoomsMO] = []
-        let fetchRequest: NSFetchRequest<RoomsMO> = RoomsMO.fetchRequest()
-        let predicate1 = NSPredicate(format: "beaconMajorVal = %@", beaconMajorVal)
-        let predicate2 = NSPredicate(format: "beaconMinorVal = %@", beaconMinorVal)
-        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1, predicate2])
-        do{
-            roomsResult = try context.fetch(fetchRequest)
-        }catch {
-            print("Code not find room")
-        }
-        return roomsResult[0]
-    }
     
     class func detectedRoomExist (beaconMajorVal: String, beaconMinorVal: String) -> Bool{
         let context = getContext()
@@ -143,9 +126,9 @@ class coreDataHelper: NSObject {
         return false
     }
     
-    class func getDetectedRoomWThrow (beaconMajorVal: String, beaconMinorVal: String) throws -> RoomsMO{
+    class func getDetectedRoomWThrow (beaconMajorVal: String, beaconMinorVal: String) throws -> RoomsMO?{
            let context = getContext()
-           var detectedRoom: RoomsMO
+           var detectedRoom: RoomsMO? = nil
            var roomsResult : [RoomsMO] = []
            let fetchRequest: NSFetchRequest<RoomsMO> = RoomsMO.fetchRequest()
            let predicate1 = NSPredicate(format: "beaconMajorVal = %@", beaconMajorVal)
@@ -153,11 +136,17 @@ class coreDataHelper: NSObject {
            fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1, predicate2])
            do{
                roomsResult = try context.fetch(fetchRequest)
+            if roomsResult.count == 1 {
+                detectedRoom = roomsResult[0]
+                return detectedRoom
+            }else if roomsResult.count < 0{
+                throw CoreDataHelperError.noRoomFound(resultsFound: roomsResult.count)
+            }
            }catch {
-            throw CoreDataHelperError.fetchfailed
+            throw CoreDataHelperError.fetchfailed(error: error.localizedDescription)
            }
-            detectedRoom = roomsResult[0]
-            return detectedRoom
+        return detectedRoom
+      
     }
 }
 
