@@ -30,7 +30,9 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        dismissDelegate.didDismiss(result: true)
+        if seguedFromBeaconDiscovery{
+           dismissDelegate.didDismiss(result: true)
+        }
     }
 
     @IBAction func dismissBtn(_ sender: Any) {
