@@ -12,6 +12,7 @@ class RoomListViewController: UIViewController {
     
     var floorObj: FloorsMO?
     var roomObj: RoomsMO?
+    var selectedFloor: String = ""
     var currentIndex: Int = 0
     
     @IBOutlet weak var tableView: UITableView!
@@ -53,7 +54,9 @@ extension RoomListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentIndex = indexPath.row
+        
         roomObj = (floorObj?.rooms?[currentIndex])!
+        
         tableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: "goToRoomDetails", sender: self)
     }
