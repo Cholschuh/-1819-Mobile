@@ -15,6 +15,15 @@ class NavigationViewController: UIViewController {
         super.viewDidLoad()
         arrayOfMenuItems = menuItems().getData()
         tableView.reloadData()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBOutlet weak var tableView: UITableView!

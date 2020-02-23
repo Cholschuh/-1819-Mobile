@@ -65,7 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gMO-hJ-PEq"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2h4-4R-NGq"/>
+                    <navigationItem key="navigationItem" title="Rooms" id="2h4-4R-NGq"/>
                     <connections>
                         <outlet property="tableView" destination="h9S-mz-P48" id="5Gh-ol-ZD2"/>
                         <segue destination="cK2-8m-BGS" kind="presentation" identifier="goToRoomDetails" id="4B8-S6-EKK"/>
@@ -95,16 +95,8 @@
                                     <outlet property="delegate" destination="cK2-8m-BGS" id="wt6-cv-hv9"/>
                                 </connections>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLw-GU-p6G">
-                                <rect key="frame" x="20" y="390" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="2" height="1"/>
-                            </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nfY-fR-f9c">
-                                <rect key="frame" x="160" y="342" width="94" height="37"/>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nfY-fR-f9c">
+                                <rect key="frame" x="160" y="381" width="94" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,6 +106,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="47" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" image="xmark" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -121,8 +114,16 @@
                                     <action selector="dismissBtn:" destination="cK2-8m-BGS" eventType="touchUpInside" id="8jc-ZV-cGY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLw-GU-p6G">
+                                <rect key="frame" x="20" y="426" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycm-wX-7vu">
-                                <rect key="frame" x="20" y="428" width="374" height="354"/>
+                                <rect key="frame" x="20" y="464" width="374" height="313"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -266,17 +267,17 @@
             <objects>
                 <viewController title="Requesting Permissions" id="6uu-wv-eg5" customClass="LocationAuthViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ts-5n-aY9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orca" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-QK-w5R" userLabel="backgroundImg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuthReqInfoGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-il-xyU">
-                                <rect key="frame" x="37" y="272.66666666666674" width="340" height="291.33333333333326"/>
+                                <rect key="frame" x="37" y="184.66666666666666" width="340" height="291.33333333333337"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-W1-9lG">
-                                <rect key="frame" x="20" y="601.66666666666663" width="374" height="61"/>
+                                <rect key="frame" x="20" y="513.66666666666663" width="374" height="61"/>
                                 <string key="text">Information about this Feature, and where it works.(Chessey) Explain that the app will need to access location services to use this feature. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -284,7 +285,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-2A-ByD">
-                                <rect key="frame" x="20" y="799.66666666666663" width="374" height="50"/>
+                                <rect key="frame" x="20" y="711.66666666666663" width="374" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="D05-F3-YjS"/>
@@ -331,6 +332,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="1V8-46-9Uq"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="enableLocAuthBtn" destination="FlK-2A-ByD" id="HXm-vR-F8l"/>
                         <segue destination="hB5-v5-IcW" kind="show" identifier="goToBeaconDiscovery" id="QCf-PL-kVf"/>
                     </connections>
                 </viewController>
@@ -432,14 +434,14 @@
             <objects>
                 <viewController title="Beacon Discovery" id="hB5-v5-IcW" customClass="BeaconDiscoveryViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mq0-2j-4YY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orca" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-A2-ozu" userLabel="backgroundImg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Discovery Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-qj-QmM">
-                                <rect key="frame" x="90.666666666666686" y="437.66666666666669" width="233" height="21"/>
+                                <rect key="frame" x="90.666666666666686" y="410.66666666666669" width="233" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -556,6 +558,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="Jcp-0S-Smf" id="cYg-2e-0iA"/>
                         <outlet property="nameTxt" destination="dT5-XJ-z4Z" id="xyH-WC-nre"/>
+                        <outlet property="preRegisterBtn" destination="Hf8-cY-rUr" id="xrc-ez-tgN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGV-1n-hc7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -659,7 +662,7 @@
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XjB-vs-h59"/>
+        <segue reference="QCf-PL-kVf"/>
         <segue reference="fsj-8q-bqk"/>
         <segue reference="cVn-m1-BBJ"/>
     </inferredMetricsTieBreakers>

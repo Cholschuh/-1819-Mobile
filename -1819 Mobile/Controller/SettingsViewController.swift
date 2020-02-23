@@ -11,6 +11,8 @@ import MessageUI
 
 class SettingsViewController: UITableViewController {
     
+    let generator = UINotificationFeedbackGenerator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "Orca"))
@@ -22,7 +24,7 @@ class SettingsViewController: UITableViewController {
             print("Email is not supported on this device")
             return
         }
-        let messageBody: String = "When using the 1819 Mobile application I ran into the following problem. Please see below for details \n\nSteps taken to produce the problem:\n\n\nWhat happens when the problem occurs "
+        let messageBody: String = "When using the 1819 Mobile application I ran into the following problem. Please see below for details \n\nSteps taken to produce the problem:\n\n\nWhat happens when the problem occurs:"
         let composer =  MFMailComposeViewController()
         composer.mailComposeDelegate = self
         composer.setToRecipients(["Chris.csrstaff@gmail.com"])
@@ -40,6 +42,7 @@ extension SettingsViewController: MFMailComposeViewControllerDelegate {
         switch indexPath {
         case [0, 0]:
             coreDataHelper.clearAllVisitedLoc()
+            generator.notificationOccurred(.success)
         case [1, 0]:
             showMailComposer()
         case [2, 0]:

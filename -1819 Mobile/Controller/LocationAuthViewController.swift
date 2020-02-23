@@ -11,14 +11,16 @@ import KontaktSDK
 
 class LocationAuthViewController: UIViewController, KTKBeaconManagerDelegate{
     var seguedFromBeaconDiscovReq: Bool = false
-    
+   
+    @IBOutlet weak var enableLocAuthBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        enableLocAuthBtn.layer.cornerRadius = enableLocAuthBtn.frame.size.height/2
         if seguedFromBeaconDiscovReq{
             removePreviousViewControllerFromStack()
             seguedFromBeaconDiscovReq = false
         }
+
     }
     
     /// initialize beacon manager

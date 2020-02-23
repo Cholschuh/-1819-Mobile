@@ -9,37 +9,41 @@
 import UIKit
 import KontaktSDK
 
+
 class BeaconDiscoveryViewController: UIViewController{
-   
+    
     var beaconManager : KTKBeaconManager!
     var seguedFromAuthReq: Bool = false
     var detectedRoom: RoomsMO?
+    weak var delegate: BeaconDiscoveryViewController?
     let generator = UINotificationFeedbackGenerator()
     let secureRegion = KTKSecureBeaconRegion(proximityUUID: UUID(uuidString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")!, identifier: "1819")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         ///Removes Previous View from stack if seguing from AuthReq Controller
         if seguedFromAuthReq{
             removePreviousViewControllerFromStack()
             seguedFromAuthReq = false
         }
+        
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.navigationController?.viewControllers.firstIndex(of: self) == nil {
+            // Back button pressed because self is no longer in the navigation stack.
+            beaconManager.stopMonitoring(for: secureRegion)
+            beaconManager.stopRangingBeacons(in: secureRegion)
+        }
     }
-
-    func handleModalDismissed() {
-        beaconManager.startRangingBeacons(in: secureRegion)
-    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        /// Sets Secure Beacon
+        super.viewDidAppear(true)
+        /// instantiates  new beacon Manager
         beaconManager = KTKBeaconManager(delegate: self)
         
-        //let mySecureProximityUuid = UUID(uuidString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
-        //let secureRegion = KTKSecureBeaconRegion(proximityUUID: UUID(uuidString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")!, identifier: "1819")
-        
         if KTKBeaconManager.isMonitoringAvailable()  {
-            
             beaconManager.startMonitoring(for: secureRegion)
             beaconManager.startRangingBeacons(in: secureRegion)
         }else {
@@ -47,22 +51,30 @@ class BeaconDiscoveryViewController: UIViewController{
         }
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        //Checks to make sure user has not navigated away from the BeaconDiscoveryViewController
+        if self.navigationController?.viewControllers.firstIndex(of: self) == nil {
+            return false
+        }
+        return true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        ///Set the BeaconDiscoveryViewController Bool varible (seguedFromAuthReq) to True
-        ///when seguing to the controller. Used to dismiss previous this viewController from the
-        /// stack after segue is preformed
         if segue.identifier == "goToAuthReq" {
+            ///Set the BeaconDiscoveryViewController Bool varible (seguedFromAuthReq) to True
+            ///when seguing to the controller. Used to dismiss previous this viewController from the
+            /// stack after segue is preformed
             let destinationVC = segue.destination as! LocationAuthViewController
             destinationVC.seguedFromBeaconDiscovReq = true
         }else if segue.identifier == "goToRoomDetails" {
+            /// Generates Haptic feedback, gets detected room name, writes room to VistedRoomsMO, passes room object and seguedIndetifier  before presenting RoomDetailsViewController
             generator.notificationOccurred(.success)
+            guard let toVisitRoomName = detectedRoom?.name else {return}
+            coreDataHelper.recordVisitedLoc(name: toVisitRoomName)
             let destinationVC = segue.destination as! RoomDetailsViewController
+            destinationVC.dismissDelegate = self
             destinationVC.roomObj = detectedRoom
             destinationVC.seguedFromBeaconDiscovery = true
-            
-            //            var viewControllers = navigationController?.viewControllers
-            //            viewControllers?.append(RoomDetailsViewController())
-            //            navigationController?.setViewControllers(viewControllers!, animated: false)
             
         }
     }
@@ -76,9 +88,14 @@ class BeaconDiscoveryViewController: UIViewController{
             navigationController?.setViewControllers(viewControllers!, animated: false)
         }
     }
+    
+    func handleModalDismissed() {
+        beaconManager.startRangingBeacons(in: secureRegion)
+    }
+    
 }
 
-extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
+extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate , roomDetailDismissDelegate {
     
     func beaconManager(_ manager: KTKBeaconManager, didChangeLocationAuthorizationStatus status: CLAuthorizationStatus) {
         //        if status == .authorizedAlways || status == .authorizedWhenInUse{
@@ -92,14 +109,14 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
     func beaconManager(_ manager: KTKBeaconManager, didStartMonitoringFor region: KTKBeaconRegion) {
         /// Do something when monitoring for a particular
         /// region is successfully initiated
-        print("Monitoring for predfined Region")
+        //print("Monitoring for predfined Region")
         
     }
     
     func beaconManager(_ manager: KTKBeaconManager, didEnter region: KTKBeaconRegion) {
         /// Decide what to do when a user enters a range of your region; usually used
         /// for triggering a local notification and/or starting a beacon ranging
-        print("You've enterd my region of beacons")
+        //print("You've enterd my region of beacons")
         //beaconManager.startRangingBeacons(in: region)
         manager.startRangingBeacons(in: region)
     }
@@ -107,7 +124,7 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
     func beaconManager(_ manager: KTKBeaconManager, didExitRegion region: KTKBeaconRegion) {
         /// Decide what to do when a user exits a range of your region; usually used
         /// for triggering a local notification and stoping a beacon ranging
-        print("You've left my beacon region")
+        //print("You've left my beacon region")
         manager.stopRangingBeacons(in: region)
     }
     
@@ -123,7 +140,7 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
                     if !coreDataHelper.roomHasBeenVisited(roomName:
                         detectedRoomName){
                         manager.stopRangingBeacons(in: region)
-                        coreDataHelper.recordVisitedLoc(name: detectedRoomName)
+                        //coreDataHelper.recordVisitedLoc(name: detectedRoomName)
                         self.performSegue(withIdentifier: "goToRoomDetails", sender: self)
                     }
                     
@@ -143,4 +160,9 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate {
         
     }
     
+    func didDismiss(result: Bool) {
+        if result{
+            beaconManager.startRangingBeacons(in: secureRegion)
+        }
+    }
 }

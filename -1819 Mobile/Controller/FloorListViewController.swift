@@ -18,9 +18,6 @@ class FloorListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        print(selectedMenuOption)
     }
     override func viewWillAppear(_ animated: Bool) {
         floorObjects = coreDataHelper.getFloorObject()

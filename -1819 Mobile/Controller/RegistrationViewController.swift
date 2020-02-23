@@ -12,12 +12,14 @@ import MessageUI
 class RegistrationViewController: UIViewController{
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var preRegisterBtn: UIButton!
     var usersFullName: String?
     var usersPreferredEmail: String?
     var messageSent: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        preRegisterBtn.layer.cornerRadius = preRegisterBtn.frame.size.height/2
         ///calls extension functions to dismiss keyboard when textfield looses focus
         self.setupHideKeyboardOnTap()
     }

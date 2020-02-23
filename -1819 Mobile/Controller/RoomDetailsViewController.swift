@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+protocol roomDetailDismissDelegate {
+    func didDismiss(result: Bool)
+}
 class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var roomNameLbl: UILabel!
@@ -16,7 +18,7 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imgPageControl: UIPageControl!
     var roomObj: RoomsMO?
     var seguedFromBeaconDiscovery: Bool = false
-    
+    var dismissDelegate: roomDetailDismissDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
         if let roomObj = roomObj{
@@ -25,10 +27,12 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
             print("Not able to load room object")
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
-        
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        dismissDelegate.didDismiss(result: true)
     }
-    
+
     @IBAction func dismissBtn(_ sender: Any) {
        self.dismiss(animated: true, completion: nil)
     }
@@ -56,4 +60,6 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
         let page = scrollView.contentOffset.x/scrollView.frame.width
         imgPageControl.currentPage = Int(page)
     }
+    
 }
+
