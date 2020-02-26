@@ -18,6 +18,7 @@ class FloorListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         floorObjects = coreDataHelper.getFloorObject()
@@ -53,7 +54,7 @@ extension FloorListViewController: UITableViewDataSource, UITableViewDelegate {
         currentIndex = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
         if selectedMenuOption == "Maps"{
-            //self.performSegue(withIdentifier: "goToRoomList", sender: self)
+            self.performSegue(withIdentifier: "goToMapView", sender: self)
         }else if selectedMenuOption == "Building Information"{
             self.performSegue(withIdentifier: "goToRoomList", sender: self)
         }

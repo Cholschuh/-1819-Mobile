@@ -12,6 +12,7 @@
 		0517562C23FCF6E5004FE6C1 /* FloorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517562B23FCF6E5004FE6C1 /* FloorListViewController.swift */; };
 		0517562E23FD07C4004FE6C1 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517562D23FD07C4004FE6C1 /* RoomListViewController.swift */; };
 		0517563023FD0DCA004FE6C1 /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517562F23FD0DCA004FE6C1 /* RoomDetailsViewController.swift */; };
+		05178D59240336C4005B9BEB /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178D58240336C4005B9BEB /* FloorMapViewController.swift */; };
 		0531216023F12728008E6695 /* menuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531215F23F12728008E6695 /* menuItem.swift */; };
 		0531216223F12867008E6695 /* menuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531216123F12867008E6695 /* menuItems.swift */; };
 		053FF77923F44C4400CB4BED /* menuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053FF77823F44C4400CB4BED /* menuItemCell.swift */; };
@@ -49,6 +50,7 @@
 		0517562B23FCF6E5004FE6C1 /* FloorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorListViewController.swift; sourceTree = "<group>"; };
 		0517562D23FD07C4004FE6C1 /* RoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
 		0517562F23FD0DCA004FE6C1 /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
+		05178D58240336C4005B9BEB /* FloorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
 		0531215F23F12728008E6695 /* menuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItem.swift; sourceTree = "<group>"; };
 		0531216123F12867008E6695 /* menuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItems.swift; sourceTree = "<group>"; };
 		053FF77823F44C4400CB4BED /* menuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItemCell.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				0517562B23FCF6E5004FE6C1 /* FloorListViewController.swift */,
 				0517562D23FD07C4004FE6C1 /* RoomListViewController.swift */,
 				0517562F23FD0DCA004FE6C1 /* RoomDetailsViewController.swift */,
+				05178D58240336C4005B9BEB /* FloorMapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				05F4D27623DCD0B500EC630D /* _1819_Mobile.xcdatamodeld in Sources */,
 				0517562E23FD07C4004FE6C1 /* RoomListViewController.swift in Sources */,
 				0517562C23FCF6E5004FE6C1 /* FloorListViewController.swift in Sources */,
+				05178D59240336C4005B9BEB /* FloorMapViewController.swift in Sources */,
 				053FF77923F44C4400CB4BED /* menuItemCell.swift in Sources */,
 				05FC590023FBB08400019129 /* room.swift in Sources */,
 				0531216023F12728008E6695 /* menuItem.swift in Sources */,

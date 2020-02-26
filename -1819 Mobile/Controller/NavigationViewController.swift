@@ -13,6 +13,7 @@ class NavigationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         arrayOfMenuItems = menuItems().getData()
         tableView.reloadData()
         
