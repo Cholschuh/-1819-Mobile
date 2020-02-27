@@ -11,29 +11,36 @@ import UIKit
 
 class FloorMapViewController: UIViewController {
     var floorObj: FloorsMO?
-    var selectedFloor: String = ""
-    @IBOutlet weak var imageScrollView: UIScrollView!
+    var selectedFloorNameImagePath: String = ""
+    var selectedFloorName: String = ""
     
+    @IBAction func rotateImage(_ sender: Any) {
+    }
+    @IBAction func tapImage(_ sender: Any) {
+    }
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let floorObj = floorObj{
-//            //configureView(floorObj: floorObj)
-//        }else{
-//            print("Not able to load room object")
-//        }
+        if let floorObj = floorObj{
+            configureView(floorObj: floorObj)
+        }else{
+            print("Not able to load room object")
+        }
         
         
     }
 override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
     }
     
     @IBAction func scaleImage(_ sender: Any) {
         imageView.transform = CGAffineTransform(scaleX: (sender as AnyObject).scale, y: (sender as AnyObject).scale)
         }
     
-
+    func configureView(floorObj: FloorsMO){
+        guard let selectedFloorNameImagePath = floorObj.mapImage else{return}
+        guard let selectedFloorName = floorObj.name else{return}
+        imageView.image = UIImage(named: selectedFloorNameImagePath)
+    }
 }
-extension FloorMapViewController: UIScrollViewDelegate {}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ldy-rF-dze">
-    <device id="retina6_5" orientation="portrait" appearance="dark"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orca" translatesAutoresizingMaskIntoConstraints="NO" id="Ery-RM-Aey" userLabel="backgroundImg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG3" translatesAutoresizingMaskIntoConstraints="NO" id="Ery-RM-Aey" userLabel="backgroundImg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h9S-mz-P48">
@@ -83,12 +83,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orca" translatesAutoresizingMaskIntoConstraints="NO" id="UTO-Sy-InE" userLabel="backgroundImg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG1" translatesAutoresizingMaskIntoConstraints="NO" id="UTO-Sy-InE" userLabel="backgroundImg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gej-DM-yyJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="1fR-yd-qLR"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="8K3-0P-GGv"/>
                                 <connections>
@@ -164,55 +165,49 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orca" translatesAutoresizingMaskIntoConstraints="NO" id="Vqu-jo-cyb" userLabel="backgroundImg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="03z-0K-3cF">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPn-3p-sXU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oranges" translatesAutoresizingMaskIntoConstraints="NO" id="cxD-Hg-2je">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cxD-Hg-2je">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="wJh-oO-k8a" appends="YES" id="y96-Ho-dsp"/>
                                             <outletCollection property="gestureRecognizers" destination="3KX-ng-G5y" appends="YES" id="1B5-qD-vd5"/>
+                                            <outletCollection property="gestureRecognizers" destination="wJh-oO-k8a" appends="YES" id="y96-Ho-dsp"/>
+                                            <outletCollection property="gestureRecognizers" destination="EoY-gh-zAe" appends="YES" id="qe8-Ni-5B8"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
-                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="cxD-Hg-2je" firstAttribute="leading" secondItem="D2z-cM-gTT" secondAttribute="leading" id="9yU-sH-Ybf"/>
-                                    <constraint firstItem="D2z-cM-gTT" firstAttribute="bottom" secondItem="cxD-Hg-2je" secondAttribute="bottom" id="IW7-Xz-hMA"/>
-                                    <constraint firstItem="cxD-Hg-2je" firstAttribute="top" secondItem="D2z-cM-gTT" secondAttribute="top" id="Yl7-PV-WKY"/>
-                                    <constraint firstItem="D2z-cM-gTT" firstAttribute="trailing" secondItem="cxD-Hg-2je" secondAttribute="trailing" id="joz-Rd-9xY"/>
+                                    <constraint firstItem="cxD-Hg-2je" firstAttribute="trailing" secondItem="e0D-5X-cCx" secondAttribute="trailing" id="7Lo-f3-y7n"/>
+                                    <constraint firstItem="cxD-Hg-2je" firstAttribute="top" secondItem="e0D-5X-cCx" secondAttribute="top" id="Iqf-Ri-csk"/>
+                                    <constraint firstItem="cxD-Hg-2je" firstAttribute="bottom" secondItem="e0D-5X-cCx" secondAttribute="bottom" id="bTM-Bg-Obe"/>
+                                    <constraint firstItem="cxD-Hg-2je" firstAttribute="leading" secondItem="e0D-5X-cCx" secondAttribute="leading" id="x5c-h0-Emu"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="IeX-i5-EOi"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="D2z-cM-gTT"/>
-                                <connections>
-                                    <outlet property="delegate" destination="5uA-8I-ib0" id="HXR-Cc-8rb"/>
-                                    <outletCollection property="gestureRecognizers" destination="wJh-oO-k8a" appends="YES" id="ldS-Cx-Y9o"/>
-                                    <outletCollection property="gestureRecognizers" destination="MbF-ZN-Euh" appends="YES" id="Y9y-UM-fS1"/>
-                                </connections>
+                                <viewLayoutGuide key="contentLayoutGuide" id="RSY-NU-M7G"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="e0D-5X-cCx"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="03z-0K-3cF" firstAttribute="leading" secondItem="Lzf-1L-bzJ" secondAttribute="leading" id="5HM-JF-IfL"/>
+                            <constraint firstItem="pPn-3p-sXU" firstAttribute="top" secondItem="Lzf-1L-bzJ" secondAttribute="top" id="2kk-JM-jcH"/>
+                            <constraint firstItem="pPn-3p-sXU" firstAttribute="trailing" secondItem="Lzf-1L-bzJ" secondAttribute="trailing" id="FaJ-wN-DHY"/>
+                            <constraint firstItem="pPn-3p-sXU" firstAttribute="leading" secondItem="Lzf-1L-bzJ" secondAttribute="leading" id="H7D-P4-FfZ"/>
                             <constraint firstItem="Vqu-jo-cyb" firstAttribute="trailing" secondItem="Lzf-1L-bzJ" secondAttribute="trailing" id="RGI-50-dlN"/>
-                            <constraint firstItem="03z-0K-3cF" firstAttribute="trailing" secondItem="Lzf-1L-bzJ" secondAttribute="trailing" id="Vhj-fw-JDK"/>
                             <constraint firstAttribute="bottom" secondItem="Vqu-jo-cyb" secondAttribute="bottom" id="ZUj-Dw-Xud"/>
                             <constraint firstItem="Vqu-jo-cyb" firstAttribute="leading" secondItem="Lzf-1L-bzJ" secondAttribute="leading" id="afW-0G-YxS"/>
-                            <constraint firstItem="03z-0K-3cF" firstAttribute="top" secondItem="c5X-ZM-Cz1" secondAttribute="top" id="n05-Mg-tS1"/>
-                            <constraint firstItem="c5X-ZM-Cz1" firstAttribute="bottom" secondItem="03z-0K-3cF" secondAttribute="bottom" constant="-34" id="pjl-ei-Slf"/>
+                            <constraint firstAttribute="bottom" secondItem="pPn-3p-sXU" secondAttribute="bottom" id="ivY-w7-vES"/>
                             <constraint firstItem="Vqu-jo-cyb" firstAttribute="top" secondItem="Lzf-1L-bzJ" secondAttribute="top" id="sC9-LG-WXG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c5X-ZM-Cz1"/>
                     </view>
                     <navigationItem key="navigationItem" id="hzL-im-Yua"/>
                     <connections>
-                        <outlet property="imageScrollView" destination="03z-0K-3cF" id="Jjh-9i-kq2"/>
                         <outlet property="imageView" destination="cxD-Hg-2je" id="vcA-Vv-Jbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZjZ-VO-D0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer scale="1.7" id="wJh-oO-k8a">
+                <pinchGestureRecognizer id="wJh-oO-k8a">
                     <connections>
                         <action selector="scaleImage:" destination="5uA-8I-ib0" id="hw8-BO-5vu"/>
                         <outlet property="delegate" destination="cxD-Hg-2je" id="akE-Ae-Scf"/>
@@ -220,14 +215,17 @@
                 </pinchGestureRecognizer>
                 <rotationGestureRecognizer id="MbF-ZN-Euh">
                     <connections>
+                        <action selector="rotateImage:" destination="5uA-8I-ib0" id="7a8-0B-9yU"/>
                         <outlet property="delegate" destination="cxD-Hg-2je" id="urX-zc-y7I"/>
                     </connections>
                 </rotationGestureRecognizer>
                 <tapGestureRecognizer id="3KX-ng-G5y">
                     <connections>
+                        <action selector="tapImage:" destination="5uA-8I-ib0" id="29H-1I-Oid"/>
                         <outlet property="delegate" destination="cxD-Hg-2je" id="cBm-gy-zuZ"/>
                     </connections>
                 </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="EoY-gh-zAe"/>
             </objects>
             <point key="canvasLocation" x="3731.884057971015" y="-569.19642857142856"/>
         </scene>
@@ -239,7 +237,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orca" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-zl-U69" userLabel="backgroundImage">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1819" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxe-GI-4O8">
+                                <rect key="frame" x="260" y="137" width="111" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG2" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-zl-U69" userLabel="backgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -281,14 +287,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Cae-L1-xqa"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1819" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxe-GI-4O8">
-                                <rect key="frame" x="260" y="137" width="111" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="37"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -425,7 +423,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orca" translatesAutoresizingMaskIntoConstraints="NO" id="Hvl-BT-4dR" userLabel="backgroundImg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG4" translatesAutoresizingMaskIntoConstraints="NO" id="Hvl-BT-4dR" userLabel="backgroundImg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k4Z-FQ-NaD">
@@ -714,12 +712,15 @@
     </scenes>
     <resources>
         <image name="AuthReqInfoGraphic" width="291.66665649414062" height="291.66665649414062"/>
-        <image name="Oranges" width="160" height="213"/>
+        <image name="BG1" width="1242" height="2688"/>
+        <image name="BG2" width="1242" height="2688"/>
+        <image name="BG3" width="1242" height="2688"/>
+        <image name="BG4" width="1242" height="2688"/>
         <image name="Orca" width="281" height="609"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QCf-PL-kVf"/>
+        <segue reference="XjB-vs-h59"/>
         <segue reference="nTk-wC-RN5"/>
         <segue reference="4B8-S6-EKK"/>
     </inferredMetricsTieBreakers>

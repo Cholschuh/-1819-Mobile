@@ -1,6 +1,6 @@
 [{
     "name": "Floor 1",
-    "mapImage": "Path/to/imagemap",
+    "mapImage": "1819Floor1Map",
     "rooms":[
         {
             "name": "1819 Innovation Hub",
@@ -78,7 +78,7 @@
 },
 {
     "name": "Floor 2",
-    "mapImage": "Path/to/imagemap",
+    "mapImage": "1819Floor2Map",
     "rooms":[
         {
             "name": "Fifth Third Innovation Hub",
@@ -135,7 +135,7 @@
 },
 {
     "name": "Floor 3",
-    "mapImage": "Path/to/imagemap",
+    "mapImage": "1819Floor3Map",
     "rooms":[
         {
             "name": "Kroger",
@@ -247,7 +247,7 @@
 },
 {
     "name": "Floor 4",
-    "mapImage": "Path/to/imagemap",
+    "mapImage": "1819Floor4Map",
     "rooms":[
         {
             "name": "Cincytech",
