@@ -175,6 +175,7 @@
                                             <outletCollection property="gestureRecognizers" destination="3KX-ng-G5y" appends="YES" id="1B5-qD-vd5"/>
                                             <outletCollection property="gestureRecognizers" destination="wJh-oO-k8a" appends="YES" id="y96-Ho-dsp"/>
                                             <outletCollection property="gestureRecognizers" destination="EoY-gh-zAe" appends="YES" id="qe8-Ni-5B8"/>
+                                            <outletCollection property="gestureRecognizers" destination="owd-OX-zuU" appends="YES" id="trB-5K-Rl2"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -186,6 +187,9 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="RSY-NU-M7G"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="e0D-5X-cCx"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5uA-8I-ib0" id="6b7-x8-dj7"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -210,22 +214,27 @@
                 <pinchGestureRecognizer id="wJh-oO-k8a">
                     <connections>
                         <action selector="scaleImage:" destination="5uA-8I-ib0" id="hw8-BO-5vu"/>
-                        <outlet property="delegate" destination="cxD-Hg-2je" id="akE-Ae-Scf"/>
+                        <outlet property="delegate" destination="5uA-8I-ib0" id="FqI-OD-W2h"/>
                     </connections>
                 </pinchGestureRecognizer>
-                <rotationGestureRecognizer id="MbF-ZN-Euh">
+                <tapGestureRecognizer numberOfTapsRequired="2" id="3KX-ng-G5y">
                     <connections>
-                        <action selector="rotateImage:" destination="5uA-8I-ib0" id="7a8-0B-9yU"/>
-                        <outlet property="delegate" destination="cxD-Hg-2je" id="urX-zc-y7I"/>
-                    </connections>
-                </rotationGestureRecognizer>
-                <tapGestureRecognizer id="3KX-ng-G5y">
-                    <connections>
-                        <action selector="tapImage:" destination="5uA-8I-ib0" id="29H-1I-Oid"/>
-                        <outlet property="delegate" destination="cxD-Hg-2je" id="cBm-gy-zuZ"/>
+                        <action selector="tapImage:" destination="5uA-8I-ib0" id="rSN-EA-Fi7"/>
+                        <outlet property="delegate" destination="5uA-8I-ib0" id="lpU-Hh-luQ"/>
                     </connections>
                 </tapGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="EoY-gh-zAe"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="EoY-gh-zAe">
+                    <connections>
+                        <action selector="panImage:" destination="5uA-8I-ib0" id="X6S-yF-UnO"/>
+                        <outlet property="delegate" destination="5uA-8I-ib0" id="TDg-WJ-Cjj"/>
+                    </connections>
+                </panGestureRecognizer>
+                <rotationGestureRecognizer id="owd-OX-zuU">
+                    <connections>
+                        <action selector="rotateImage:" destination="5uA-8I-ib0" id="47e-o5-FKl"/>
+                        <outlet property="delegate" destination="5uA-8I-ib0" id="CuL-dd-oSl"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3731.884057971015" y="-569.19642857142856"/>
         </scene>
