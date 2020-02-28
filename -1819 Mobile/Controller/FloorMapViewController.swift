@@ -33,7 +33,6 @@ class FloorMapViewController: UIViewController {
     @IBAction func panImage(_ recognizer: UIPanGestureRecognizer) {
         
         guard let recognizerView = recognizer.view else{return}
-        
         let translation =  recognizer.translation(in: view)
         recognizerView.center.x += translation.x
         recognizerView.center.y += translation.y
@@ -73,7 +72,9 @@ class FloorMapViewController: UIViewController {
         imageView.image = UIImage(named: selectedFloorNameImagePath)
         imageView.isAccessibilityElement = true
         imageView.accessibilityLabel = "A map image of \(selectedFloorName) Rooms"
+        
     }
+    
     
     func scaleImageUp() {
         imageView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
@@ -84,7 +85,7 @@ class FloorMapViewController: UIViewController {
         imageView.transform = CGAffineTransform.identity
         imageZoomed = false
     }
-    
+   
 }
 extension FloorMapViewController: UIGestureRecognizerDelegate {
     
