@@ -217,7 +217,6 @@
                     <navigationItem key="navigationItem" id="hzL-im-Yua"/>
                     <connections>
                         <outlet property="imageView" destination="cxD-Hg-2je" id="vcA-Vv-Jbd"/>
-                        <outlet property="navigationTitle" destination="hzL-im-Yua" id="yg5-ea-XWm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZjZ-VO-D0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -34,9 +34,15 @@ class FloorMapViewController: UIViewController {
         
         guard let recognizerView = recognizer.view else{return}
         let translation =  recognizer.translation(in: view)
+        let orginCenter = recognizerView.center
         recognizerView.center.x += translation.x
         recognizerView.center.y += translation.y
         recognizer.setTranslation(.zero, in: view)
+        if !recognizerView.frame.contains(recognizer.location(in: recognizerView)) {
+            // Gesture started inside the pannable view. Do your thing.
+            //recognizerView.center = orginCenter
+        }
+        
         
         
     }
@@ -69,6 +75,7 @@ class FloorMapViewController: UIViewController {
     func configureView(floorObj: FloorsMO){
         guard let selectedFloorNameImagePath = floorObj.mapImage else{return}
         guard let selectedFloorName = floorObj.name else{return}
+        navigationItem.title = selectedFloorName
         imageView.image = UIImage(named: selectedFloorNameImagePath)
         imageView.isAccessibilityElement = true
         imageView.accessibilityLabel = "A map image of \(selectedFloorName) Rooms"
