@@ -12,6 +12,7 @@ import UIKit
 class FloorMapViewController: UIViewController {
     var floorObj: FloorsMO?
     var imageZoomed: Bool = false
+    var initialCenter = CGPoint()
     var selectedFloorNameImagePath: String = ""
     var selectedFloorName: String = ""
     @IBOutlet weak var imageView: UIImageView!
@@ -30,28 +31,60 @@ class FloorMapViewController: UIViewController {
         super.viewWillLayoutSubviews()
     }
     
-    @IBAction func panImage(_ recognizer: UIPanGestureRecognizer) {
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
+        if (self.isMovingFromParent) {
+          UIDevice.current.setValue(Int(UIInterfaceOrientation.portrait.rawValue), forKey: "orientation")
+        }
+
+    }
+    
+    @IBAction func panImage(_ recognizer: UIPanGestureRecognizer) {
+
         guard let recognizerView = recognizer.view else{return}
         let translation =  recognizer.translation(in: view)
-        let orginCenter = recognizerView.center
-        recognizerView.center.x += translation.x
-        recognizerView.center.y += translation.y
-        recognizer.setTranslation(.zero, in: view)
-        if !recognizerView.frame.contains(recognizer.location(in: recognizerView)) {
-            // Gesture started inside the pannable view. Do your thing.
-            //recognizerView.center = orginCenter
+        if recognizer.state == .began{
+            self.initialCenter = recognizerView.center
         }
+        if !recognizerView.frame.contains(recognizer.location(in: recognizerView)){
+            recognizerView.center = self.initialCenter
+            recognizer.setTranslation(.zero, in: view)
+            
+        }else{
+            let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
+            recognizerView.center = newCenter
+            //recognizerView.center.x += translation.x
+            //recognizerView.center.y += translation.y
+            recognizer.setTranslation(.zero, in: view)
+        }
+        
+        
+//        if !recognizerView.frame.contains(recognizer.location(in: recognizerView)){
+//            recognizerView.center = self.initialCenter
+//        }
+        
+//        if recognizerView.frame.contains(recognizer.location(in: recognizerView)) {
+//            //Gesture started inside the pannable view. Do your thing.
+//            //recognizerView.center = orginCenter
+//            recognizerView.center.x += translation.x
+//            recognizerView.center.y += translation.y
+//            recognizer.setTranslation(.zero, in: view)
+//        }else{
+//            recognizerView.center = orginCenter
+//            recognizer.setTranslation(.zero, in: view)
+//        }
         
         
         
     }
     @IBAction func rotateImage(_ recognizer: UIRotationGestureRecognizer) {
         
-        if let recognizerView = recognizer.view {
-            recognizerView.transform = imageView.transform.rotated(by: recognizer.rotation)
-            recognizer.rotation = 0
-        }
+//        if let recognizerView = recognizer.view {
+//            recognizerView.transform = imageView.transform.rotated(by: recognizer.rotation)
+//            recognizer.rotation = 0
+//        }
     }
     @IBAction func tapImage(_ sender: Any) {
         if (!imageZoomed) {
@@ -84,7 +117,7 @@ class FloorMapViewController: UIViewController {
     
     
     func scaleImageUp() {
-        imageView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        imageView.transform = CGAffineTransform(scaleX: 2.5, y: 2.5)
         imageZoomed = true
     }
     
@@ -92,6 +125,8 @@ class FloorMapViewController: UIViewController {
         imageView.transform = CGAffineTransform.identity
         imageZoomed = false
     }
+    
+     @objc func canRotate() -> Void {}
    
 }
 extension FloorMapViewController: UIGestureRecognizerDelegate {
