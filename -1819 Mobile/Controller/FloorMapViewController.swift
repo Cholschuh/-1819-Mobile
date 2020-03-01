@@ -11,16 +11,17 @@ import UIKit
 
 class FloorMapViewController: UIViewController {
     var floorObj: FloorsMO?
-    var imageZoomed: Bool = false
-    var initialCenter = CGPoint()
     var selectedFloorNameImagePath: String = ""
     var selectedFloorName: String = ""
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var ScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.hidesBarsWhenVerticallyCompact = true
         if let floorObj = floorObj{
             configureView(floorObj: floorObj)
+
         }else{
             print("Not able to load room object")
         }
@@ -29,80 +30,26 @@ class FloorMapViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        if ScrollView.zoomScale > 1{
+            ScrollView.zoomScale = 1
+        }
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
+        super.viewWillDisappear(true)
+        self.navigationController?.hidesBarsWhenVerticallyCompact = false
+        if ScrollView.zoomScale > 1{
+            ScrollView.zoomScale = 1
+        }
         if (self.isMovingFromParent) {
           UIDevice.current.setValue(Int(UIInterfaceOrientation.portrait.rawValue), forKey: "orientation")
         }
 
-    }
-    
-    @IBAction func panImage(_ recognizer: UIPanGestureRecognizer) {
-
-        guard let recognizerView = recognizer.view else{return}
-        let translation =  recognizer.translation(in: view)
-        if recognizer.state == .began{
-            self.initialCenter = recognizerView.center
-        }
-        if !recognizerView.frame.contains(recognizer.location(in: recognizerView)){
-            recognizerView.center = self.initialCenter
-            recognizer.setTranslation(.zero, in: view)
-            
-        }else{
-            let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
-            recognizerView.center = newCenter
-            //recognizerView.center.x += translation.x
-            //recognizerView.center.y += translation.y
-            recognizer.setTranslation(.zero, in: view)
-        }
-        
-        
-//        if !recognizerView.frame.contains(recognizer.location(in: recognizerView)){
-//            recognizerView.center = self.initialCenter
-//        }
-        
-//        if recognizerView.frame.contains(recognizer.location(in: recognizerView)) {
-//            //Gesture started inside the pannable view. Do your thing.
-//            //recognizerView.center = orginCenter
-//            recognizerView.center.x += translation.x
-//            recognizerView.center.y += translation.y
-//            recognizer.setTranslation(.zero, in: view)
-//        }else{
-//            recognizerView.center = orginCenter
-//            recognizer.setTranslation(.zero, in: view)
-//        }
-        
-        
-        
-    }
-    @IBAction func rotateImage(_ recognizer: UIRotationGestureRecognizer) {
-        
-//        if let recognizerView = recognizer.view {
-//            recognizerView.transform = imageView.transform.rotated(by: recognizer.rotation)
-//            recognizer.rotation = 0
-//        }
-    }
-    @IBAction func tapImage(_ sender: Any) {
-        if (!imageZoomed) {
-            scaleImageUp()
-            imageZoomed = true
-        } else {
-            normalizeImage()
-            imageZoomed = false
-        }
-    }
-    @IBAction func scaleImage(_ recognizer: UIPinchGestureRecognizer) {
-        
-        guard let recognizerView = recognizer.view else{return}
-        
-        recognizerView.transform = recognizerView.transform.scaledBy(x: recognizer.scale, y: recognizer.scale)
-        recognizer.scale = 1
-        //        imageView.transform = CGAffineTransform(scaleX: (sender as AnyObject).scale, y: (sender as AnyObject).scale)
-        
     }
     
     func configureView(floorObj: FloorsMO){
@@ -114,24 +61,57 @@ class FloorMapViewController: UIViewController {
         imageView.accessibilityLabel = "A map image of \(selectedFloorName) Rooms"
         
     }
+//    private func recenterImage(){
+//        let scrollViewSize = ScrollView.bounds.size
+//        let imageViewSize = imageView.frame.size
+//        let horizontalSpace = imageViewSize.width < scrollViewSize.width ? (scrollViewSize.width - imageViewSize.width) / 2.0 : 0
+//
+//        let verticalSpace = imageViewSize.height < scrollViewSize.height ? (scrollViewSize.height - imageViewSize.height) / 2.0 : 0
+//
+//        ScrollView.contentInset = UIEdgeInsets(top: verticalSpace, left: horizontalSpace, bottom: verticalSpace, right: horizontalSpace)
+//    }
     
-    
-    func scaleImageUp() {
-        imageView.transform = CGAffineTransform(scaleX: 2.5, y: 2.5)
-        imageZoomed = true
-    }
-    
-    func normalizeImage() {
-        imageView.transform = CGAffineTransform.identity
-        imageZoomed = false
-    }
+//    private func setZoomScaleFor(scrollViewSize: CGSize){
+//        let imageSize = imageView.bounds.size
+//        let widthScale = scrollViewSize.width / imageSize.width
+//        let heightScale = scrollViewSize.height / imageSize.height
+//        let minimunScale = min(widthScale, heightScale)
+//        
+//        ScrollView.minimumZoomScale = minimunScale
+//        ScrollView.maximumZoomScale = 5
+//    }
     
      @objc func canRotate() -> Void {}
    
 }
-extension FloorMapViewController: UIGestureRecognizerDelegate {
+extension FloorMapViewController:  UIScrollViewDelegate {
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+
+        if scrollView.zoomScale > 1{
+            if let mapImage = imageView.image {
+                let ratioW = imageView.frame.width / mapImage.size.width
+                let ratioH = imageView.frame.height / mapImage.size.height
+
+                let ratio = ratioW < ratioH ? ratioW : ratioH
+                let newWidth = mapImage.size.width * ratio
+                let newHeight = mapImage.size.height * ratio
+
+                let conditionLeft = newWidth * scrollView.zoomScale > imageView.frame.width
+                let left = 0.5 * (conditionLeft ? newWidth - imageView.frame.width : (scrollView.frame.width - scrollView.contentSize.width))
+
+                let conditionTop = newHeight * scrollView.zoomScale > imageView.frame.height
+
+                let top = 0.5 * (conditionTop ? newHeight - imageView.frame.height : (scrollView.frame.height - scrollView.contentSize.height))
+
+                scrollView.contentInset = UIEdgeInsets(top: top, left: left, bottom: top, right: left)
+            }
+        }else{
+            scrollView.contentInset = .zero
+        }
     }
 }

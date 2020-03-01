@@ -15,7 +15,7 @@ class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundView = UIImageView(image: UIImage(named: "BG14"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "BG1 clear"))
         // Do any additional setup after loading the view.
     }
     
