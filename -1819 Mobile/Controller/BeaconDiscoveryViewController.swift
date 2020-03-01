@@ -140,7 +140,6 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate , roomDetailDi
                     if !coreDataHelper.roomHasBeenVisited(roomName:
                         detectedRoomName){
                         manager.stopRangingBeacons(in: region)
-                        //coreDataHelper.recordVisitedLoc(name: detectedRoomName)
                         self.performSegue(withIdentifier: "goToRoomDetails", sender: self)
                     }
                     

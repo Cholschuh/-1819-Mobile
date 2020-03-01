@@ -15,7 +15,7 @@
                 },
                 {
                     "path": "Building",
-                    "altText": "This is a photo of a Buidling"
+                    "altText": "This is a photo of a Building"
                 },
                 {
                     "path": "Library",
@@ -31,8 +31,8 @@
             "beaconMajorVal": "44795",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "LaserCutters",
+                    "altText": "This is a photo of 1819 Makerspace's Laser Cutters"
                 },
                 {
                     "path": "path/to/photo",

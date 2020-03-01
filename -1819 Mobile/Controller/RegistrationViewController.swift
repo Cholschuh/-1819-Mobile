@@ -13,6 +13,9 @@ class RegistrationViewController: UIViewController{
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var preRegisterBtn: UIButton!
+    @IBOutlet weak var nameAlert: UILabel!
+    @IBOutlet weak var emailAlert: UILabel!
+    
     var usersFullName: String?
     var usersPreferredEmail: String?
     var messageSent: Bool = false
@@ -22,25 +25,32 @@ class RegistrationViewController: UIViewController{
         preRegisterBtn.layer.cornerRadius = preRegisterBtn.frame.size.height/2
         ///calls extension functions to dismiss keyboard when textfield looses focus
         self.setupHideKeyboardOnTap()
+        nameAlert.isHidden = true
+        emailAlert.isHidden = true
     }
     
     @IBAction func preRegisterBtn(_ sender: UIButton) {
+        view.endEditing(true)
         usersFullName = nameTxt.text
         usersPreferredEmail = emailTxt.text
         
         if !usersFullName!.isEmpty && !usersPreferredEmail!.isEmpty{
+            usersPreferredEmail = usersPreferredEmail!.trimmingCharacters(in: .whitespaces)
+            usersFullName = usersFullName!.trimmingCharacters(in: .whitespaces)
             if validationHelper.isEmailVaild(emailAddress: usersPreferredEmail!){
                 showMailComposer(usersFN: usersFullName!, usersPrefEmail: usersPreferredEmail!)
             }else{
-                print("email invaild")
+                emailAlert.isHidden = false
                 return
             }
         }
         else if !usersFullName!.isEmpty && usersPreferredEmail!.isEmpty{
+            usersFullName = usersFullName!.trimmingCharacters(in: .whitespaces)
             showMailComposer(usersFN: usersFullName!, usersPrefEmail: "NA")
         }
         else{
-            print("username is required")
+            
+            nameAlert.isHidden = false
             return
         }
     }
@@ -103,6 +113,13 @@ extension RegistrationViewController: MFMailComposeViewControllerDelegate, UITex
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
         tap.cancelsTouchesInView = false
         return tap
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        nameAlert.isHidden = true
+        emailAlert.isHidden = true
+        return true
     }
     
 }

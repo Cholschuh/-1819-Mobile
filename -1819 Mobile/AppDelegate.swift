@@ -168,7 +168,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         }else{
-            //print("Data already loaded")
+            //Data already loaded
+            return
             
         }
     }
