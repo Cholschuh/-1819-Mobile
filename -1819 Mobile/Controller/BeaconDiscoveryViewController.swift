@@ -10,6 +10,8 @@ import UIKit
 import KontaktSDK
 
 
+
+
 class BeaconDiscoveryViewController: UIViewController{
     
     var beaconManager : KTKBeaconManager!
@@ -19,14 +21,25 @@ class BeaconDiscoveryViewController: UIViewController{
     let generator = UINotificationFeedbackGenerator()
     let secureRegion = KTKSecureBeaconRegion(proximityUUID: UUID(uuidString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")!, identifier: "1819")
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+         
+       
         ///Removes Previous View from stack if seguing from AuthReq Controller
         if seguedFromAuthReq{
             removePreviousViewControllerFromStack()
             seguedFromAuthReq = false
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        networkCheckHelper().startMonitor {[weak self] reachable in
+                 guard let strongSelf = self else { return }
+                 strongSelf.checkNetworkConnection(reachable)
+             }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -40,6 +53,12 @@ class BeaconDiscoveryViewController: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
+//        networkCheckHelper().startMonitor {[weak self] reachable in
+//            guard let strongSelf = self else { return }
+//            strongSelf.checkNetworkConnection(reachable)
+//        }
+    
         /// instantiates  new beacon Manager
         beaconManager = KTKBeaconManager(delegate: self)
         
@@ -52,7 +71,7 @@ class BeaconDiscoveryViewController: UIViewController{
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        //Checks to make sure user has not navigated away from the BeaconDiscoveryViewController
+        ///Checks to make sure user has not navigated away from the BeaconDiscoveryViewController
         if self.navigationController?.viewControllers.firstIndex(of: self) == nil {
             return false
         }
@@ -63,7 +82,7 @@ class BeaconDiscoveryViewController: UIViewController{
         if segue.identifier == "goToAuthReq" {
             ///Set the BeaconDiscoveryViewController Bool varible (seguedFromAuthReq) to True
             ///when seguing to the controller. Used to dismiss previous this viewController from the
-            /// stack after segue is preformed
+            ///stack after segue is preformed
             let destinationVC = segue.destination as! LocationAuthViewController
             destinationVC.seguedFromBeaconDiscovReq = true
         }else if segue.identifier == "goToRoomDetails" {
@@ -76,6 +95,9 @@ class BeaconDiscoveryViewController: UIViewController{
             destinationVC.roomObj = detectedRoom
             destinationVC.seguedFromBeaconDiscovery = true
             
+        }else if segue.identifier == "goToLostInternet"{
+            let destinationVC = segue.destination as! CheckNetworkViewController
+            destinationVC.seguedFromBeaconDiscovReq = true
         }
     }
     
@@ -93,38 +115,39 @@ class BeaconDiscoveryViewController: UIViewController{
         beaconManager.startRangingBeacons(in: secureRegion)
     }
     
+    private func checkNetworkConnection(_ reachable: Reachable){
+        if reachable == .no {
+            DispatchQueue.main.async {
+        self.performSegue(withIdentifier: "goToLostInternet", sender:self)
+            }
+        }
+    }
+    
 }
 
 extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate , roomDetailDismissDelegate {
     
     func beaconManager(_ manager: KTKBeaconManager, didChangeLocationAuthorizationStatus status: CLAuthorizationStatus) {
-        //        if status == .authorizedAlways || status == .authorizedWhenInUse{
-        //        }
         if status == .denied || status == .notDetermined{
             self.performSegue(withIdentifier: "goToAuthReq", sender:self)
-            print("BeaconStatusChanged")
             
         }
     }
     func beaconManager(_ manager: KTKBeaconManager, didStartMonitoringFor region: KTKBeaconRegion) {
         /// Do something when monitoring for a particular
         /// region is successfully initiated
-        //print("Monitoring for predfined Region")
         
     }
     
     func beaconManager(_ manager: KTKBeaconManager, didEnter region: KTKBeaconRegion) {
         /// Decide what to do when a user enters a range of your region; usually used
         /// for triggering a local notification and/or starting a beacon ranging
-        //print("You've enterd my region of beacons")
-        //beaconManager.startRangingBeacons(in: region)
         manager.startRangingBeacons(in: region)
     }
     
     func beaconManager(_ manager: KTKBeaconManager, didExitRegion region: KTKBeaconRegion) {
         /// Decide what to do when a user exits a range of your region; usually used
         /// for triggering a local notification and stoping a beacon ranging
-        //print("You've left my beacon region")
         manager.stopRangingBeacons(in: region)
     }
     
@@ -133,7 +156,7 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate , roomDetailDi
             let nearestBeacon = beacons.first!
             switch nearestBeacon.proximity{
             case .immediate:
-                print("Nearest Beacon is \(nearestBeacon.ktk_minor) \(nearestBeacon.ktk_major)")
+//                print("Nearest Beacon is \(nearestBeacon.ktk_minor) \(nearestBeacon.ktk_major)")
                 detectedRoom = try? coreDataHelper.getDetectedRoomWThrow(beaconMajorVal: nearestBeacon.ktk_major.stringValue, beaconMinorVal: nearestBeacon.ktk_minor.stringValue)
                 if detectedRoom != nil {
                     guard let detectedRoomName = detectedRoom?.name else {return}
@@ -152,7 +175,6 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate , roomDetailDi
             case .unknown:
                 break
             @unknown default:
-                //print("Error")
                 break
             }
         }
