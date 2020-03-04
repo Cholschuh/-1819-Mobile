@@ -10,26 +10,29 @@ import UIKit
 import KontaktSDK
 
 class NavigationViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    var arrayOfMenuItems:[menuItem] = [menuItem]()
+    var currentIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        arrayOfMenuItems = menuItems().getData()
-        tableView.reloadData()
+//        arrayOfMenuItems = menuItems().getData()
+//        tableView.reloadData()
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.isNavigationBarHidden = true
+        arrayOfMenuItems = menuItems().getData()
+        tableView.reloadData()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         self.navigationController?.isNavigationBarHidden = false
     }
     
-    @IBOutlet weak var tableView: UITableView!
-    var arrayOfMenuItems:[menuItem] = [menuItem]()
-    var currentIndex: Int = 0
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToFloorList" {

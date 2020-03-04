@@ -25,6 +25,7 @@ class FloorMapViewController: UIViewController {
         }else{
             print("Not able to load room object")
         }
+        //configureView()
     }
     
     
@@ -51,35 +52,25 @@ class FloorMapViewController: UIViewController {
         }
 
     }
-    
+//    func configureView(){
+//         navigationItem.title = selectedFloorName
+//         imageView.image = UIImage(named: selectedFloorNameImagePath)
+//         imageView.isAccessibilityElement = true
+//         imageView.accessibilityLabel = "A map image of \(selectedFloorName) Rooms"
+//         
+//     }
     func configureView(floorObj: FloorsMO){
         guard let selectedFloorNameImagePath = floorObj.mapImage else{return}
         guard let selectedFloorName = floorObj.name else{return}
         navigationItem.title = selectedFloorName
+//        let path = Bundle.main.path(forResource: selectedFloorNameImagePath, ofType: "png")!
+//        let original = UIImage(contentsOfFile: path)!
+//        print(original)
         imageView.image = UIImage(named: selectedFloorNameImagePath)
         imageView.isAccessibilityElement = true
         imageView.accessibilityLabel = "A map image of \(selectedFloorName) Rooms"
-        
+
     }
-//    private func recenterImage(){
-//        let scrollViewSize = ScrollView.bounds.size
-//        let imageViewSize = imageView.frame.size
-//        let horizontalSpace = imageViewSize.width < scrollViewSize.width ? (scrollViewSize.width - imageViewSize.width) / 2.0 : 0
-//
-//        let verticalSpace = imageViewSize.height < scrollViewSize.height ? (scrollViewSize.height - imageViewSize.height) / 2.0 : 0
-//
-//        ScrollView.contentInset = UIEdgeInsets(top: verticalSpace, left: horizontalSpace, bottom: verticalSpace, right: horizontalSpace)
-//    }
-    
-//    private func setZoomScaleFor(scrollViewSize: CGSize){
-//        let imageSize = imageView.bounds.size
-//        let widthScale = scrollViewSize.width / imageSize.width
-//        let heightScale = scrollViewSize.height / imageSize.height
-//        let minimunScale = min(widthScale, heightScale)
-//        
-//        ScrollView.minimumZoomScale = minimunScale
-//        ScrollView.maximumZoomScale = 5
-//    }
     
      @objc func canRotate() -> Void {}
    

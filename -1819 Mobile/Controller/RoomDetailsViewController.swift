@@ -19,6 +19,7 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
     var roomObj: RoomsMO?
     var seguedFromBeaconDiscovery: Bool = false
     var dismissDelegate: roomDetailDismissDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let roomObj = roomObj{

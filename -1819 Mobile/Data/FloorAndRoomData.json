@@ -35,8 +35,12 @@
                     "altText": "This is a photo of 1819 Makerspace's Laser Cutters"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower2",
+                    "altText": "This is a photo of a flower"
+                },
+                {
+                    "path": "Flower3",
+                    "altText": "This is a photo of a flower"
                 }
             ]
         },
@@ -48,12 +52,16 @@
             "beaconMajorVal": "113253",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower4",
+                    "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower5",
+                    "altText": "This is a photo of a flower"
+                },
+                {
+                    "path": "Flower6",
+                    "altText": "This is a photo of a flower"
                 }
             ]
         },
@@ -65,12 +73,16 @@
             "beaconMajorVal": "113053",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower7",
+                    "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower8",
+                    "altText": "This is a photo of a flower"
+                },
+                {
+                    "path": "Flower9",
+                    "altText": "This is a photo of a flower"
                 }
             ]
         }
@@ -88,12 +100,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo",
+                    "path": "Flower10",
                     "altText": "This is a photo of the room 1"
                 },
                 {
-                    "path": "path/to/photo",
+                    "path": "Flower11",
                     "altText": "This is a photo of the room 1 partner logo"
+                },
+                {
+                    "path": "Flower12",
+                    "altText": "This is a photo of a flower"
                 }
             ]
         },
@@ -105,12 +121,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo Room 2",
-                    "altText": "This is a photo of the room 2"
+                    "path": "Flower13",
+                    "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "path/to/photo Room 2",
-                    "altText": "This is a photo of the room 2 partner logo "
+                    "path": "Flower14",
+                    "altText": "This is a photo of a flower"
+                },
+                {
+                    "path": "Flower15",
+                    "altText": "This is a photo of a flower"
                 }
             ]
         },
@@ -122,12 +142,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo Room 2",
-                    "altText": "This is a photo of the room 2"
+                    "path": "Flower16",
+                    "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "path/to/photo Room 2",
-                    "altText": "This is a photo of the room 2 partner logo "
+                    "path": "Flower17",
+                    "altText": "This is a photo of a flower"
+                },
+                {
+                    "path": "Flower18",
+                    "altText": "This is a photo of a flower"
                 }
             ]
         }
@@ -145,16 +169,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Oranges",
-                    "altText": "This is a photo of Oranges"
+                    "path": "Flower19",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Building",
-                    "altText": "This is a photo of a Buidling"
+                    "path": "Flower20",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Library",
-                    "altText": "This is a photo of a Library"
+                    "path": "Flower21",
+                    "altText": "This is a photo of a Flower"
                 }
             ]
         },
@@ -166,12 +190,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower22",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower23",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "Flower24",
+                    "altText": "This is a photo of a Flower"
                 }
             ]
         },
@@ -183,12 +211,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower25",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower26",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "Flower27",
+                    "altText": "This is a photo of a Flower"
                 }
             ]
         },
@@ -200,12 +232,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower28",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower29",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "Flower30",
+                    "altText": "This is a photo of a Flower"
                 }
             ]
         },
@@ -217,12 +253,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower31",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower32",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "Flower33",
+                    "altText": "This is a photo of a Flower"
                 }
             ]
         },
@@ -234,12 +274,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower34",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower35",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "Flower36",
+                    "altText": "This is a photo of a Flower"
                 }
             ]
         }
@@ -257,12 +301,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower37",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower38",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "Flower39",
+                    "altText": "This is a photo of a Flower"
                 }
             ]
         },
@@ -274,12 +322,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower40",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower41",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "Flower42",
+                    "altText": "This is a photo of a Flower"
                 }
             ]
         },
@@ -291,12 +343,16 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the 1819 Markerspace"
+                    "path": "Flower43",
+                    "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "path/to/photo",
-                    "altText": "This is a photo of the Makerspace's 3D printers "
+                    "path": "Flower44",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "Flower45",
+                    "altText": "This is a photo of a Flower"
                 }
             ]
         }

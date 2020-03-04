@@ -18,7 +18,7 @@ class FloorListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -35,8 +35,10 @@ class FloorListViewController: UIViewController {
         }else if segue.identifier == "goToMapView"{
             let destinationVC = segue.destination as! FloorMapViewController
             destinationVC.floorObj = floorObjects[currentIndex]
-//            destinationVC.selectedFloorName = floorObjects[currentIndex].name ?? ""
-//            destinationVC.selectedFloorNameImagePath = floorObjects[currentIndex].mapImage ?? ""
+//            guard let selectedFloorNameImagePath = floorObjects[currentIndex].mapImage else{return}
+//            guard let selectedFloorName = floorObjects[currentIndex].name else{return}
+//            destinationVC.selectedFloorName = selectedFloorName
+//            destinationVC.selectedFloorNameImagePath = selectedFloorNameImagePath
         }
     }
 }
