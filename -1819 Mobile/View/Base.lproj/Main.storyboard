@@ -271,14 +271,14 @@
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemCell" id="Lk4-kJ-UoX" customClass="menuItemCell" customModule="_819_Mobile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="49.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lk4-kJ-UoX" id="SFQ-gI-HGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icr-Zj-Ic7">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="344" height="27.666666666666671"/>
+                                                    <rect key="frame" x="20" y="11" width="344" height="27"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-ExtraBold" family="Open Sans" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -345,17 +345,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuthReqInfoGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-il-xyU">
-                                <rect key="frame" x="37" y="269.33333333333337" width="340" height="291.33333333333337"/>
+                                <rect key="frame" x="37" y="153" width="340" height="291"/>
                                 <accessibility key="accessibilityConfiguration" label="A person with a mobile device standing infront of a beacon.">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mG5-il-xyU" secondAttribute="height" multiplier="340:291" id="gub-eL-NgY"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-2A-ByD">
-                                <rect key="frame" x="20" y="800" width="374" height="50"/>
+                                <rect key="frame" x="20" y="790" width="374" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="D05-F3-YjS"/>
-                                    <constraint firstAttribute="height" constant="50" id="bfs-B6-hax"/>
+                                    <constraint firstAttribute="height" constant="60" id="vD0-d3-IYl"/>
                                 </constraints>
                                 <state key="normal" title="Enable Location Services">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -364,39 +366,34 @@
                                     <action selector="enableLocAuth:" destination="6uu-wv-eg5" eventType="touchUpInside" id="xUO-ou-QPc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Discovering Beacons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycj-Wx-ItT">
-                                <rect key="frame" x="20" y="207" width="374" height="20.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-W1-9lG">
-                                <rect key="frame" x="20" y="599" width="374" height="61"/>
-                                <string key="text">Information about this Feature, and where it works.(Chessey) Explain that the app will need to access location services to use this feature. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="452" width="374" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="OHY-Lr-lIl"/>
+                                </constraints>
+                                <string key="text">1819 Mobile utilizes location services to accurately collect data from Beacons around the 1819 Innovation Hub. Please enable location services and ensure that you have an active internet connection to use this feature.</string>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="1" height="1"/>
+                                <size key="shadowOffset" width="2" height="2"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="X7P-W1-9lG" firstAttribute="top" secondItem="mG5-il-xyU" secondAttribute="bottom" constant="38.329999999999998" id="1cP-0j-N13"/>
-                            <constraint firstItem="Ypl-G2-o8n" firstAttribute="trailing" secondItem="X7P-W1-9lG" secondAttribute="trailing" constant="20" id="3Yy-th-SNd"/>
-                            <constraint firstItem="Ypl-G2-o8n" firstAttribute="trailing" secondItem="Ycj-Wx-ItT" secondAttribute="trailing" constant="20" id="F6g-Du-QYe"/>
-                            <constraint firstItem="Ypl-G2-o8n" firstAttribute="trailing" secondItem="mG5-il-xyU" secondAttribute="trailing" constant="37" id="Jdr-H8-5jY"/>
+                            <constraint firstItem="X7P-W1-9lG" firstAttribute="leading" secondItem="FlK-2A-ByD" secondAttribute="leading" id="3e9-e9-wwn"/>
+                            <constraint firstItem="Ypl-G2-o8n" firstAttribute="trailing" secondItem="FlK-2A-ByD" secondAttribute="trailing" constant="20" id="7TM-p1-HQb"/>
+                            <constraint firstItem="X7P-W1-9lG" firstAttribute="top" secondItem="mG5-il-xyU" secondAttribute="bottom" constant="8" id="Mrl-3U-6cK"/>
                             <constraint firstItem="FSM-QK-w5R" firstAttribute="leading" secondItem="0Ts-5n-aY9" secondAttribute="leading" id="NxI-Ji-ydy"/>
-                            <constraint firstItem="X7P-W1-9lG" firstAttribute="leading" secondItem="Ypl-G2-o8n" secondAttribute="leading" constant="20" id="Rgm-Qg-UlG"/>
                             <constraint firstAttribute="bottom" secondItem="FSM-QK-w5R" secondAttribute="bottom" id="Sfj-O0-MS9"/>
+                            <constraint firstItem="mG5-il-xyU" firstAttribute="top" secondItem="Ypl-G2-o8n" secondAttribute="top" constant="13" id="YCh-as-zmh"/>
+                            <constraint firstItem="Ypl-G2-o8n" firstAttribute="trailing" secondItem="mG5-il-xyU" secondAttribute="trailing" constant="37" id="ZtD-Ls-bpS"/>
                             <constraint firstItem="FlK-2A-ByD" firstAttribute="leading" secondItem="Ypl-G2-o8n" secondAttribute="leading" constant="20" id="gAD-hs-rK7"/>
-                            <constraint firstItem="mG5-il-xyU" firstAttribute="top" secondItem="Ycj-Wx-ItT" secondAttribute="bottom" constant="41.670000000000002" id="gYv-ZN-KUw"/>
+                            <constraint firstItem="FlK-2A-ByD" firstAttribute="leading" secondItem="Ypl-G2-o8n" secondAttribute="leading" constant="20" id="gdS-Ab-kxi"/>
+                            <constraint firstItem="X7P-W1-9lG" firstAttribute="trailing" secondItem="FlK-2A-ByD" secondAttribute="trailing" id="hlT-Qm-t54"/>
                             <constraint firstItem="FSM-QK-w5R" firstAttribute="top" secondItem="0Ts-5n-aY9" secondAttribute="top" id="hvd-kx-yHb"/>
                             <constraint firstItem="FSM-QK-w5R" firstAttribute="trailing" secondItem="0Ts-5n-aY9" secondAttribute="trailing" id="jVO-d0-riT"/>
                             <constraint firstItem="Ypl-G2-o8n" firstAttribute="bottom" secondItem="FlK-2A-ByD" secondAttribute="bottom" constant="12" id="kbJ-F6-lxo"/>
-                            <constraint firstItem="mG5-il-xyU" firstAttribute="leading" secondItem="Ypl-G2-o8n" secondAttribute="leading" constant="37" id="kwA-Mo-Q7E"/>
-                            <constraint firstItem="Ycj-Wx-ItT" firstAttribute="top" secondItem="Ypl-G2-o8n" secondAttribute="top" constant="67" id="p6e-V5-TKg"/>
-                            <constraint firstItem="Ycj-Wx-ItT" firstAttribute="leading" secondItem="Ypl-G2-o8n" secondAttribute="leading" constant="20" id="xiQ-iI-VaU"/>
+                            <constraint firstItem="mG5-il-xyU" firstAttribute="leading" secondItem="Ypl-G2-o8n" secondAttribute="leading" constant="37" id="ywd-A6-VuM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ypl-G2-o8n"/>
                     </view>
@@ -823,7 +820,7 @@
         <image name="xmark" width="14" height="14"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XjB-vs-h59"/>
+        <segue reference="QCf-PL-kVf"/>
         <segue reference="nTk-wC-RN5"/>
         <segue reference="cVn-m1-BBJ"/>
     </inferredMetricsTieBreakers>
