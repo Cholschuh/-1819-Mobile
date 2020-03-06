@@ -17,15 +17,16 @@ class NavigationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-//        arrayOfMenuItems = menuItems().getData()
-//        tableView.reloadData()
-        
+        navbarTransparentForIOS12()
+        //        arrayOfMenuItems = menuItems().getData()
+        //        tableView.reloadData()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.isNavigationBarHidden = true
         arrayOfMenuItems = menuItems().getData()
         tableView.reloadData()
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
@@ -42,6 +43,21 @@ class NavigationViewController: UIViewController {
         }
     }
     
+    func navbarTransparentForIOS12(){
+        
+        if #available(iOS 13.0, *){
+            // Do nothing
+        }else{
+            // For iOS 12
+            // removes line at bottom of navigation bar
+            navigationController?.navigationBar.shadowImage = UIImage()
+            
+            // makes navigation bar completely transparent
+            navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationController?.navigationBar.isTranslucent = true
+        }
+        
+    }
 }
 extension NavigationViewController: UITableViewDataSource, UITableViewDelegate{
     
