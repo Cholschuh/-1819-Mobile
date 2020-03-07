@@ -14,6 +14,7 @@ import KontaktSDK
 
 class BeaconDiscoveryViewController: UIViewController{
     
+    @IBOutlet weak var BeaconLbl: UILabel!
     var beaconManager : KTKBeaconManager!
     var seguedFromAuthReq: Bool = false
     var detectedRoom: RoomsMO?
@@ -156,7 +157,7 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate , roomDetailDi
             let nearestBeacon = beacons.first!
             switch nearestBeacon.proximity{
             case .immediate:
-//                print("Nearest Beacon is \(nearestBeacon.ktk_minor) \(nearestBeacon.ktk_major)")
+                BeaconLbl.text = "\(nearestBeacon.ktk_minor)  \(nearestBeacon.ktk_major)"
                 detectedRoom = try? coreDataHelper.getDetectedRoomWThrow(beaconMajorVal: nearestBeacon.ktk_major.stringValue, beaconMinorVal: nearestBeacon.ktk_minor.stringValue)
                 if detectedRoom != nil {
                     guard let detectedRoomName = detectedRoom?.name else {return}
