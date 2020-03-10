@@ -22,7 +22,7 @@ class FloorListViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         floorObjects = coreDataHelper.getFloorObject()
         tableView.reloadData()
         
@@ -31,6 +31,8 @@ class FloorListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToRoomList" {
             let destinationVC = segue.destination as! RoomListViewController
+            guard let selectedFloorName = floorObjects[currentIndex].name else{return}
+            destinationVC.selectedFloorName = selectedFloorName
             destinationVC.floorObj = floorObjects[currentIndex]
         }else if segue.identifier == "goToMapView"{
             let destinationVC = segue.destination as! FloorMapViewController

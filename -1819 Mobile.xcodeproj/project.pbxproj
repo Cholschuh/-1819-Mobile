@@ -588,7 +588,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.holschuh.-1819-Mobile";
 				PRODUCT_NAME = "1819 Mobile";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -608,7 +608,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.holschuh.-1819-Mobile";
 				PRODUCT_NAME = "1819 Mobile";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

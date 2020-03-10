@@ -211,8 +211,8 @@
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower25",
-                    "altText": "This is a photo of a Flower"
+                    "path": "Kingsgate1",
+                    "altText": "This is a photo of Kingsgate office wall logo."
                 },
                 {
                     "path": "Flower26",
@@ -315,15 +315,15 @@
             ]
         },
         {
-            "name": "Fidelity Information Services (Worldpay)",
+            "name": "Fidelity Information Services",
             "roomNumber": "402",
-            "information": "Worldpay, Inc. is a leading payments provider with unique capability to power global integrated omni-commerce, any payment, anywhere. With industry-leading scale and an unmatched integrated technology platform, Worldpay offers customers a comprehensive suite of products and services globally, delivered through a single provider. Worldpay processes over 40 billion transactions annually, supporting more than 300 payment types across 146 countries and 126 currencies. The company is focused on expanding into high-growth markets and customer segments including global eCommerce, integrated payments and B2B.",
+            "information": "Fidelity Information Services (FIS) is a leading payments provider with unique capability to power global integrated omni-commerce, any payment, anywhere. With industry-leading scale and an unmatched integrated technology platform, FIS offers customers a comprehensive suite of products and services globally, delivered through a single provider. Worldpay processes over 40 billion transactions annually, supporting more than 300 payment types across 146 countries and 126 currencies. The company is focused on expanding into high-growth markets and customer segments including global eCommerce, integrated payments and B2B.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower40",
-                    "altText": "This is a photo of a Flower"
+                    "path": "FIS1",
+                    "altText": "This is a photo of Fidelity Information Services logo located on their office's window."
                 },
                 {
                     "path": "Flower41",

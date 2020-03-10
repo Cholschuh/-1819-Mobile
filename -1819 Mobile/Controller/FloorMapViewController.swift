@@ -25,7 +25,6 @@ class FloorMapViewController: UIViewController {
         }else{
             print("Not able to load room object")
         }
-        //configureView()
     }
     
     
@@ -52,13 +51,7 @@ class FloorMapViewController: UIViewController {
         }
 
     }
-//    func configureView(){
-//         navigationItem.title = selectedFloorName
-//         imageView.image = UIImage(named: selectedFloorNameImagePath)
-//         imageView.isAccessibilityElement = true
-//         imageView.accessibilityLabel = "A map image of \(selectedFloorName) Rooms"
-//         
-//     }
+
     func configureView(floorObj: FloorsMO){
         guard let selectedFloorNameImagePath = floorObj.mapImage else{return}
         guard let selectedFloorName = floorObj.name else{return}

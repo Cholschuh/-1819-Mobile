@@ -12,13 +12,14 @@ class RoomListViewController: UIViewController {
     
     var floorObj: FloorsMO?
     var roomObj: RoomsMO?
-    var selectedFloor: String = ""
+    var selectedFloorName: String?
     var currentIndex: Int = 0
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = selectedFloorName ?? "Floor"
         tableView.reloadData()
     }
     
