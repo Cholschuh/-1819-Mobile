@@ -73,7 +73,6 @@ class RoomDetailsViewController: UIViewController, UIScrollViewDelegate {
             imageView.accessibilityLabel = roomPhotos[i].altText
             //sets starting x postion for each photo.
             let xPos = CGFloat(i) * self.view.bounds.size.width
-            print(imgScrollView.frame.size.height)
             
             imageView.frame = CGRect(x: xPos, y: 0, width: view.frame.size.width, height: 360)
             

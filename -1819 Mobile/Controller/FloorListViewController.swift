@@ -37,10 +37,6 @@ class FloorListViewController: UIViewController {
         }else if segue.identifier == "goToMapView"{
             let destinationVC = segue.destination as! FloorMapViewController
             destinationVC.floorObj = floorObjects[currentIndex]
-//            guard let selectedFloorNameImagePath = floorObjects[currentIndex].mapImage else{return}
-//            guard let selectedFloorName = floorObjects[currentIndex].name else{return}
-//            destinationVC.selectedFloorName = selectedFloorName
-//            destinationVC.selectedFloorNameImagePath = selectedFloorNameImagePath
         }
     }
 }

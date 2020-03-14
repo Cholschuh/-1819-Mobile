@@ -15,7 +15,7 @@ class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundView = UIImageView(image: UIImage(named: "BG1 clear"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "next"))
         // Do any additional setup after loading the view.
     }
     
@@ -46,7 +46,7 @@ extension SettingsViewController: MFMailComposeViewControllerDelegate {
         case [1, 0]:
             showMailComposer()
         case [2, 0]:
-            print("Team page")
+            self.performSegue(withIdentifier: "goToAboutUs", sender: self)
         default:
             return
         }

@@ -56,9 +56,6 @@ class FloorMapViewController: UIViewController {
         guard let selectedFloorNameImagePath = floorObj.mapImage else{return}
         guard let selectedFloorName = floorObj.name else{return}
         navigationItem.title = selectedFloorName
-//        let path = Bundle.main.path(forResource: selectedFloorNameImagePath, ofType: "png")!
-//        let original = UIImage(contentsOfFile: path)!
-//        print(original)
         imageView.image = UIImage(named: selectedFloorNameImagePath)
         imageView.isAccessibilityElement = true
         imageView.accessibilityLabel = "A map image of \(selectedFloorName) Rooms"

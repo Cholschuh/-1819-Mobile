@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG8 clear" translatesAutoresizingMaskIntoConstraints="NO" id="Ery-RM-Aey" userLabel="backgroundImg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suites - any view" translatesAutoresizingMaskIntoConstraints="NO" id="Ery-RM-Aey" userLabel="backgroundImg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h9S-mz-P48">
@@ -203,7 +203,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG1 clear" translatesAutoresizingMaskIntoConstraints="NO" id="Vqu-jo-cyb" userLabel="backgroundImg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG1 blur" translatesAutoresizingMaskIntoConstraints="NO" id="Vqu-jo-cyb" userLabel="backgroundImg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="DD7-jh-gmj">
@@ -280,14 +280,14 @@
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemCell" id="Lk4-kJ-UoX" customClass="menuItemCell" customModule="_819_Mobile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="49"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="49.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lk4-kJ-UoX" id="SFQ-gI-HGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icr-Zj-Ic7">
-                                                    <rect key="frame" x="20" y="11" width="344" height="27"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="344" height="27.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-ExtraBold" family="Open Sans" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -346,14 +346,14 @@
             <objects>
                 <viewController title="Requesting Permissions" id="6uu-wv-eg5" customClass="LocationAuthViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ts-5n-aY9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG1 clear" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-QK-w5R" userLabel="backgroundImg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tools - maker" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-QK-w5R" userLabel="backgroundImg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuthReqInfoGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-il-xyU">
-                                <rect key="frame" x="37" y="153" width="340" height="291"/>
+                                <rect key="frame" x="37" y="13" width="340" height="291"/>
                                 <accessibility key="accessibilityConfiguration" label="A person with a mobile device standing infront of a beacon.">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -362,7 +362,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-2A-ByD">
-                                <rect key="frame" x="20" y="790" width="374" height="60"/>
+                                <rect key="frame" x="20" y="736" width="374" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="vD0-d3-IYl"/>
@@ -375,7 +375,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-W1-9lG">
-                                <rect key="frame" x="20" y="452" width="374" height="172"/>
+                                <rect key="frame" x="20" y="312" width="374" height="172"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="172" id="OHY-Lr-lIl"/>
                                 </constraints>
@@ -454,7 +454,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG5 clear" translatesAutoresizingMaskIntoConstraints="NO" id="Hvl-BT-4dR" userLabel="backgroundImg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steps - floors" translatesAutoresizingMaskIntoConstraints="NO" id="Hvl-BT-4dR" userLabel="backgroundImg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k4Z-FQ-NaD">
@@ -525,14 +525,14 @@
             <objects>
                 <viewController title="Beacon Discovery" id="hB5-v5-IcW" customClass="BeaconDiscoveryViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mq0-2j-4YY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG4 clear" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-A2-ozu" userLabel="backgroundImg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wires 2 - proably nothing" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-A2-ozu" userLabel="backgroundImg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Discovery Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-qj-QmM">
-                                <rect key="frame" x="90.666666666666686" y="437.66666666666669" width="233" height="21"/>
+                                <rect key="frame" x="90.666666666666686" y="410.66666666666669" width="233" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -568,14 +568,14 @@
             <objects>
                 <viewController title="Check Network" id="2aV-od-fFj" customClass="CheckNetworkViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TIb-YR-9MP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG2 clear" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-0Y-1Jz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spire - any view" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-0Y-1Jz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hIR-mf-5kk">
-                                <rect key="frame" x="87" y="383.33333333333331" width="240" height="126.33333333333331"/>
+                                <rect key="frame" x="87" y="356.33333333333331" width="240" height="126.33333333333334"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="8Ce-ig-jLl"/>
@@ -583,7 +583,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please connect to the internet to use this feature. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeF-oC-aCb">
-                                <rect key="frame" x="20" y="259.66666666666669" width="374" height="51.333333333333314"/>
+                                <rect key="frame" x="20" y="232.66666666666666" width="374" height="51.333333333333343"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -619,7 +619,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG7 clear" translatesAutoresizingMaskIntoConstraints="NO" id="SZZ-HO-QuN" userLabel="backgroundImg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Building 3" translatesAutoresizingMaskIntoConstraints="NO" id="SZZ-HO-QuN" userLabel="backgroundImg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf8-cY-rUr">
@@ -777,7 +777,7 @@
         <scene sceneID="IDs-ng-UDB">
             <objects>
                 <tableViewController id="THz-z5-bbT" customClass="SettingsViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L5I-Aq-zt1">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L5I-Aq-zt1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -861,30 +861,61 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="sVS-al-tiL"/>
+                    <connections>
+                        <segue destination="P7S-Hf-rbf" kind="show" identifier="goToAboutUs" id="9Lj-JQ-EVo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mc4-yz-wtO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1931.8840579710147" y="883.92857142857144"/>
         </scene>
+        <!--The Developer Team-->
+        <scene sceneID="erC-AJ-eRu">
+            <objects>
+                <viewController title="The Developer Team" id="P7S-Hf-rbf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fM5-vc-Tq4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colors - maker" translatesAutoresizingMaskIntoConstraints="NO" id="WW4-NV-VO2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WW4-NV-VO2" firstAttribute="trailing" secondItem="fM5-vc-Tq4" secondAttribute="trailing" id="Lmx-Rm-u86"/>
+                            <constraint firstItem="WW4-NV-VO2" firstAttribute="leading" secondItem="fM5-vc-Tq4" secondAttribute="leading" id="dQk-U4-8QW"/>
+                            <constraint firstItem="WW4-NV-VO2" firstAttribute="top" secondItem="fM5-vc-Tq4" secondAttribute="top" id="f7A-ui-FRo"/>
+                            <constraint firstAttribute="bottom" secondItem="WW4-NV-VO2" secondAttribute="bottom" id="zoO-kB-mtY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Fh-9c-skL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="The Developer Team" id="sth-CV-SJP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mh-Aa-CPm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2221.739130434783" y="1567.6339285714284"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AuthReqInfoGraphic" width="291.66665649414062" height="291.66665649414062"/>
         <image name="BG1 blur" width="1242" height="2688"/>
-        <image name="BG1 clear" width="1242" height="2688"/>
-        <image name="BG2 clear" width="1242" height="2688"/>
-        <image name="BG4 clear" width="1242" height="2688"/>
-        <image name="BG5 clear" width="1242" height="2688"/>
-        <image name="BG7 clear" width="1242" height="2688"/>
-        <image name="BG8 clear" width="1242" height="2688"/>
+        <image name="Building 3" width="621" height="1344"/>
         <image name="FloorMapKey" width="375" height="500"/>
         <image name="Main 2" width="1242" height="2688"/>
+        <image name="colors - maker" width="621" height="1344"/>
+        <image name="spire - any view" width="621" height="1344"/>
+        <image name="steps - floors" width="621" height="1344"/>
+        <image name="suites - any view" width="621" height="1344"/>
+        <image name="tools - maker" width="621" height="1344"/>
         <image name="wifi.slash" catalog="system" width="64" height="56"/>
+        <image name="wires 2 - proably nothing" width="621" height="1344"/>
         <image name="x" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XjB-vs-h59"/>
-        <segue reference="nTk-wC-RN5"/>
-        <segue reference="4B8-S6-EKK"/>
+        <segue reference="QCf-PL-kVf"/>
+        <segue reference="fsj-8q-bqk"/>
+        <segue reference="cVn-m1-BBJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
