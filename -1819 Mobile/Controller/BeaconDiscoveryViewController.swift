@@ -157,7 +157,7 @@ extension BeaconDiscoveryViewController: KTKBeaconManagerDelegate , roomDetailDi
             let nearestBeacon = beacons.first!
             switch nearestBeacon.proximity{
             case .immediate:
-                BeaconLbl.text = "\(nearestBeacon.ktk_minor)  \(nearestBeacon.ktk_major)"
+                //BeaconLbl.text = "\(nearestBeacon.ktk_minor)  \(nearestBeacon.ktk_major)"
                 detectedRoom = try? coreDataHelper.getDetectedRoomWThrow(beaconMajorVal: nearestBeacon.ktk_major.stringValue, beaconMinorVal: nearestBeacon.ktk_minor.stringValue)
                 if detectedRoom != nil {
                     guard let detectedRoomName = detectedRoom?.name else {return}
