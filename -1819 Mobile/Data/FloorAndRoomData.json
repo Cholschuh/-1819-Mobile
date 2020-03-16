@@ -4,84 +4,76 @@
     "rooms":[
         {
             "name": "1819 Innovation Hub",
-            "roomNumber": "100",
+            "roomNumber": "000",
             "information": "The 1819 Innovation hub is a 100,000 square foot state of the art building that is equipped with the tools and resources needed to foster innovation. Floors one and two consist of mostly creation and collaboration spaces while floors three and four are dedicated to corporate partnerships. The hours are convenient for everyone and the building is accessible by shuttles from UC.",
             "beaconMinorVal": "46783",
             "beaconMajorVal": "53036",
             "photos":[
                 {
-                    "path": "Oranges",
+                    "path": "1819_1",
                     "altText": "This is a photo of Oranges"
                 },
                 {
-                    "path": "Building",
+                    "path": "1819_2",
                     "altText": "This is a photo of a Building"
                 },
                 {
-                    "path": "Library",
+                    "path": "1819_3",
                     "altText": "This is a photo of a Library"
                 }
             ]
         },
         {
             "name": "Makerspace",
-            "roomNumber": "101",
+            "roomNumber": "160",
             "information": "The makerspace is split in to two main areas the Makerspace and the Microfactory. This first area is dedicated more to smaller projects and hardware while the fabrication shop has hardware designed for larger scale projects. The makerspace has tools like Computers with full design suites (AutoDesk, Adobe, etc.), several different types of 3D printers, large format plotters, laser cutters, sewing machines, fabric printers, and much more. Certain tools within the makerspace like laser cutters require certifications and further training to use.",
             "beaconMinorVal": "52989",
             "beaconMajorVal": "44795",
             "photos":[
                 {
-                    "path": "LaserCutters",
+                    "path": "Makerspace1",
                     "altText": "This is a photo of 1819 Makerspace's Laser Cutters"
                 },
                 {
-                    "path": "Flower2",
+                    "path": "Makerspace2",
                     "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "Flower3",
+                    "path": "Makerspace3",
+                    "altText": "This is a photo of a flower"
+                },
+                {
+                    "path": "Makerspace4",
                     "altText": "This is a photo of a flower"
                 }
             ]
         },
         {
             "name": "Makerspace Lobby",
-            "roomNumber": "102",
+            "roomNumber": "150",
             "information": "All tools are available for free after registering for the blackboard course and attending an orientation session with the makerspace staff. (Section about the times that classes are available). While the tools themselves are free to use, you must pay for any materials that you use.",
             "beaconMinorVal": "105351",
             "beaconMajorVal": "113253",
             "photos":[
                 {
-                    "path": "Flower4",
-                    "altText": "This is a photo of a flower"
-                },
-                {
-                    "path": "Flower5",
-                    "altText": "This is a photo of a flower"
-                },
-                {
-                    "path": "Flower6",
+                    "path": "MakerspaceLobby1",
                     "altText": "This is a photo of a flower"
                 }
             ]
         },
         {
             "name": "Microfactory",
-            "roomNumber": "103",
+            "roomNumber": "140",
             "information": "The Microfactory has tools like a water jet cutter, CNC machine, soldering tools, woodworking equipment, welding tools, general power tools, and much more. Members must go through advanced training before using the Microfactory. Additionally, certain equipment in the fabrication shop can only be operated by makerspace technicians.",
             "beaconMinorVal": "105391",
             "beaconMajorVal": "113053",
             "photos":[
                 {
-                    "path": "Flower7",
+                    "path": "Microfactory1",
                     "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "Flower8",
-                    "altText": "This is a photo of a flower"
-                },
-                {
-                    "path": "Flower9",
+                    "path": "Microfactory2",
                     "altText": "This is a photo of a flower"
                 }
             ]
@@ -94,63 +86,63 @@
     "rooms":[
         {
             "name": "Fifth Third Innovation Hub",
-            "roomNumber": "200",
+            "roomNumber": "250",
             "information": "Coming Soon! Fifth Third bank is currently in the process of constructing their innovation hub office within 1819 as well.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower10",
+                    "path": "FithThird1",
                     "altText": "This is a photo of the room 1"
                 },
                 {
-                    "path": "Flower11",
+                    "path": "FithThird2",
                     "altText": "This is a photo of the room 1 partner logo"
-                },
-                {
-                    "path": "Flower12",
-                    "altText": "This is a photo of a flower"
                 }
             ]
         },
         {
             "name": "Venture Lab",
-            "roomNumber": "201",
+            "roomNumber": "260",
             "information": "The second floor also houses the UC Venture Lab, an accelerator that helps students, faculty and staff rapidly develops startup ideas in order to attract investors. Entrepreneurs in Residence (EIRs) at 1819 can provide guidance to startup teams if they see potential in the idea that’s being presented. From there the EIRs can give professional advice and assist the teams with finding the funding for their ideas.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower13",
+                    "path": "VentureLab1",
                     "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "Flower14",
+                    "path": "VentureLab2",
                     "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "Flower15",
+                    "path": "VentureLab3",
                     "altText": "This is a photo of a flower"
                 }
             ]
         },
         {
             "name": "Modular Classrooms",
-            "roomNumber": "203",
+            "roomNumber": "200",
             "information": "The three modular classrooms are equipped with large screens and state of the art AV equipment for presentations. These classrooms and the multi-use space are available to the colleges at UC for collaborations with corporate partners and the other UC colleges.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower16",
+                    "path": "ModClassrooms1",
                     "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "Flower17",
+                    "path": "ModClassrooms2",
                     "altText": "This is a photo of a flower"
                 },
                 {
-                    "path": "Flower18",
+                    "path": "ModClassrooms3",
+                    "altText": "This is a photo of a flower"
+                },
+                {
+                    "path": "ModClassrooms4",
                     "altText": "This is a photo of a flower"
                 }
             ]
@@ -163,49 +155,37 @@
     "rooms":[
         {
             "name": "Kroger",
-            "roomNumber": "300",
+            "roomNumber": "370",
             "information": "This innovative collaboration is driven by Restock Kroger and provides the Kroger Technology team another creative space to partner and develop solutions to redefine the grocery customer experience. Within this Knowledge Action Center, Kroger’s R&D engineer and software developers work alongside UC faculty. The partnership also features a dynamic student co-op and internship program.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower19",
-                    "altText": "This is a photo of a Flower"
-                },
-                {
-                    "path": "Flower20",
-                    "altText": "This is a photo of a Flower"
-                },
-                {
-                    "path": "Flower21",
+                    "path": "Kroger1",
                     "altText": "This is a photo of a Flower"
                 }
             ]
         },
         {
             "name": "Cincinnati Insurance",
-            "roomNumber": "301",
+            "roomNumber": "310",
             "information": "The Cincinnati Insurance Companies vision is to be the best at serving independent agents. To achieve this, they intend to use the 1819 Partnership as a way to create, discover, and test ideas to provide products, services, and expertise that delivers on the needs of their clients. The CIC Innovation Lab @ 1819 will enable access to talent, development of an environment and scalable platform to accelerate innovation, and creation of a culture of innovation with their associates and agencies",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower22",
+                    "path": "CincyInsurance1",
                     "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Flower23",
-                    "altText": "This is a photo of a Flower"
-                },
-                {
-                    "path": "Flower24",
+                    "path": "CincyInsurance2",
                     "altText": "This is a photo of a Flower"
                 }
             ]
         },
         {
             "name": "Kingsgate",
-            "roomNumber": "302",
+            "roomNumber": "360",
             "information": "Kingsgate is a second-generation, family-owned logistics company, founded in 1986. It provides logistics support and transportation freight services for companies throughout North America. Having more than doubled in size over the past three years, Kingsgate has seen the supply chain industry change dramatically over three decades. Ready to take the next step with UC, Kingsgate’s newest location at 1819 will provide the opportunity for UC students to directly engage with company employees through co-op and internships, classes and programs, and allow the company to access the talent it needs by co-locating less than a mile from campus.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
@@ -215,74 +195,83 @@
                     "altText": "This is a photo of Kingsgate office wall logo."
                 },
                 {
-                    "path": "Flower26",
+                    "path": "Kingsgate2",
                     "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Flower27",
+                    "path": "Kingsgate3",
                     "altText": "This is a photo of a Flower"
                 }
             ]
         },
         {
             "name": "livewell",
-            "roomNumber": "303",
+            "roomNumber": "350",
             "information": "The Live Well Collaborative (LWC) is a non-profit (501 c-6) co-founded in 2007 by UC and Procter & Gamble (P&G). Its purpose is to specialize in user research for the development of products and services for living well across the life span, with an expertise in the 50+ marketplace. It is a unique academic-industry driven innovation center where interdisciplinary teams of UC faculty and students use a design thinking approach to translate consumer research into products and services.  LWC has worked with over 15 corporate and institutional partners. Current work is being done with Boeing, Cincinnati Children’s Hospital, UC Health, and P&G. The most recent work with Cincinnati Children's Hospital has produced solutions that have been implemented and are undergoing validation studies. The work with P&G and Boeing has been translated into several patents.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower28",
+                    "path": "livewell1",
                     "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Flower29",
+                    "path": "livewell2",
+                    "altText": "This is a photo of a Flower"
+                }
+            ]
+        },
+        {
+            "name": "Village Life",
+            "roomNumber": "340",
+            "information": "Village Life Outreach Project is a non-profit organization founded in 2004 and based in Cincinnati. Village Life works in partnership with three remote villages in the east African nation of Tanzania to design and implement projects to fight poverty and improve lives. Funded by UC Health, UC, and private contributions, the organization partners with students and faculty from across the University of Cincinnati to create sustainable change in the areas of healthcare, water quality and access, and educational opportunities in Tanzania.",
+            "beaconMinorVal": "",
+            "beaconMajorVal": "",
+            "photos":[
+                {
+                    "path": "VillageLife1",
                     "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Flower30",
+                    "path": "VillageLife2",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "VillageLife3",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "VillageLife4",
                     "altText": "This is a photo of a Flower"
                 }
             ]
         },
         {
             "name": "Urban Futures",
-            "roomNumber": "304",
+            "roomNumber": "335",
             "information": "The Simpson Center for Urban Futures, within UC’s College of Design, Architecture, Art, and Planning, supports the integration of visionary and interdisciplinary urban studies into curricula and provides scholarships and fellowships.",
             "beaconMinorVal": "17380",
             "beaconMajorVal": "26346",
             "photos":[
                 {
-                    "path": "Flower31",
+                    "path": "UrbanFutures1",
                     "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Flower32",
-                    "altText": "This is a photo of a Flower"
-                },
-                {
-                    "path": "Flower33",
+                    "path": "UrbanFutures2",
                     "altText": "This is a photo of a Flower"
                 }
             ]
         },
         {
             "name": "Cincinnati Bell",
-            "roomNumber": "303",
+            "roomNumber": "330",
             "information": "The Cincinnati Bell Innovation Hub fosters collaboration between. Cincinnati Bell employees and UC students and faculty, resulting in innovative applications and products that leverage Cincinnati Bell’s deep fiber network and expertise in the region. With more than $800 million invested in its local fiber network — which delivers high-speed internet service to consumers and businesses across the region — Cincinnati Bell is increasing its focus on developing new products to help customers maximize their connections.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower34",
-                    "altText": "This is a photo of a Flower"
-                },
-                {
-                    "path": "Flower35",
-                    "altText": "This is a photo of a Flower"
-                },
-                {
-                    "path": "Flower36",
+                    "path": "CincinnatiBell1",
                     "altText": "This is a photo of a Flower"
                 }
             ]
@@ -295,28 +284,24 @@
     "rooms":[
         {
             "name": "Cincytech",
-            "roomNumber": "401",
+            "roomNumber": "410",
             "information": "CincyTech transforms innovation into high performing life science and digital companies in Southwest Ohio. Its highly-skilled team provides advice and capital to entrepreneurs, helps research institutions commercialize technology through startups, and catalyzes investment from individuals and institutions into regional companies, which create jobs, economic vitality and wealth in Southwest Ohio. As the 1819 Venture Lab serves as a pipeline for new startups that will need incubation and further help/involvement from our regional ecosystem, tremendous synergies exist with having CincyTech in the building.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
                 {
-                    "path": "Flower37",
+                    "path": "CincyTech1",
                     "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Flower38",
-                    "altText": "This is a photo of a Flower"
-                },
-                {
-                    "path": "Flower39",
+                    "path": "CincyTech2",
                     "altText": "This is a photo of a Flower"
                 }
             ]
         },
         {
             "name": "Fidelity Information Services",
-            "roomNumber": "402",
+            "roomNumber": "420",
             "information": "Fidelity Information Services (FIS) is a leading payments provider with unique capability to power global integrated omni-commerce, any payment, anywhere. With industry-leading scale and an unmatched integrated technology platform, FIS offers customers a comprehensive suite of products and services globally, delivered through a single provider. Worldpay processes over 40 billion transactions annually, supporting more than 300 payment types across 146 countries and 126 currencies. The company is focused on expanding into high-growth markets and customer segments including global eCommerce, integrated payments and B2B.",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
@@ -326,32 +311,49 @@
                     "altText": "This is a photo of Fidelity Information Services logo located on their office's window."
                 },
                 {
-                    "path": "Flower41",
-                    "altText": "This is a photo of a Flower"
-                },
-                {
-                    "path": "Flower42",
+                    "path": "FIS2",
                     "altText": "This is a photo of a Flower"
                 }
             ]
         },
         {
-            "name": "Proctor and Gamble",
-            "roomNumber": "403",
-            "information": "The UC sim center is a collaboration between the University of Cincinnati and Proctor + Gamble. Backed by more than $13 million in investment by P&G, the Center’s collaborative teams of P&G employees and UC faculty and students give P&G access to talent and solutions while providing opportunities for students to work on more than 200 real-world industrial projects to date. The P&G-UC Simulation Center is credited with expediting solutions to critical commercial problems at a fraction of the cost of more traditional approaches and providing a larger recruiting pool for P&G.",
+            "name": "Office of Innovation",
+            "roomNumber": "460",
+            "information": "The Office of Innovation was formed in 2017 when the University’s 30th president, Dr. Neville G. Pinto, completed a new strategic direction called “Next Lives Here” with an Innovation Agenda as one of its primary platforms. The Office of Innovation accelerates passion and ideas into working prototypes, startups, patents, industry partnerships, and community and global impact. The Association of Public and Land-Grant Universities (APLU) has included the University of Cincinnati in its list of IEP Designees since 2013. The IEP program recognizes institutions that have demonstrated a meaningful, ongoing and substantial commitment to economic and community development, growth, and economic opportunity. We achieve this at the 1819 Innovation Hub, the connecting place where UC meets the world and the world meets UC.",
+            "beaconMinorVal": "",
+            "beaconMajorVal": "",
+            "photos":[
+                {
+                    "path": "OfficeOfInnovation1",
+                    "altText": "This is a photo of Fidelity Information Services logo located on their office's window."
+                },
+                {
+                    "path": "OfficeOfInnovation2",
+                    "altText": "This is a photo of a Flower"
+                },
+                {
+                    "path": "OfficeOfInnovation3",
+                    "altText": "This is a photo of Fidelity Information Services logo located on their office's window."
+                }
+            ]
+        },
+        {
+            "name": "P&G UC Simulation Center ",
+            "roomNumber": "440",
+            "information": "The UC sim center is a collaboration between the University of Cincinnati and Proctor & Gamble. Backed by more than $13 million in investment by P&G, the Center’s collaborative teams of P&G employees and UC faculty and students give P&G access to talent and solutions while providing opportunities for students to work on more than 200 real-world industrial projects to date. The P&G-UC Simulation Center is credited with expediting solutions to critical commercial problems at a fraction of the cost of more traditional approaches and providing a larger recruiting pool for P&G.",
             "beaconMinorVal": "6011",
             "beaconMajorVal": "28386",
             "photos":[
                 {
-                    "path": "Flower43",
+                    "path": "PAndG1",
                     "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Flower44",
+                    "path": "PAndG2",
                     "altText": "This is a photo of a Flower"
                 },
                 {
-                    "path": "Flower45",
+                    "path": "PAndG3",
                     "altText": "This is a photo of a Flower"
                 }
             ]
