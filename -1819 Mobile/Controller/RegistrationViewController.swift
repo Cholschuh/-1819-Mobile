@@ -70,7 +70,7 @@ class RegistrationViewController: UIViewController{
         
         let composer =  MFMailComposeViewController()
         composer.mailComposeDelegate = self
-        composer.setToRecipients(["Chris.csrstaff@gmail.com"])
+        composer.setToRecipients(["1819mobilehelp@gmail.com"])
         composer.setSubject("\(usersFN)'s Pre-registation request")
         composer.setMessageBody(messageBody, isHTML: false)
         present(composer, animated: true)

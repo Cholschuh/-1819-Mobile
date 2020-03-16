@@ -27,7 +27,7 @@ class SettingsViewController: UITableViewController {
         let messageBody: String = "When using the 1819 Mobile application I ran into the following problem. Please see below for details \n\nSteps taken to produce the problem:\n\n\nWhat happens when the problem occurs:"
         let composer =  MFMailComposeViewController()
         composer.mailComposeDelegate = self
-        composer.setToRecipients(["Chris.csrstaff@gmail.com"])
+        composer.setToRecipients(["1819mobilehelp@gmail.com"])
         composer.setSubject("Bug Report: 1819 Mobile Applciaiton")
         composer.setMessageBody(messageBody, isHTML: false)
         present(composer, animated: true)
