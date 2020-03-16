@@ -52,8 +52,8 @@
             "name": "Makerspace Lobby",
             "roomNumber": "150",
             "information": "All tools are available for free after registering for the blackboard course and attending an orientation session with the makerspace staff. (Section about the times that classes are available). While the tools themselves are free to use, you must pay for any materials that you use.",
-            "beaconMinorVal": "105351",
-            "beaconMajorVal": "113253",
+            "beaconMinorVal": "",
+            "beaconMajorVal": "",
             "photos":[
                 {
                     "path": "MakerspaceLobby1",
@@ -65,8 +65,8 @@
             "name": "Microfactory",
             "roomNumber": "140",
             "information": "The Microfactory has tools like a water jet cutter, CNC machine, soldering tools, woodworking equipment, welding tools, general power tools, and much more. Members must go through advanced training before using the Microfactory. Additionally, certain equipment in the fabrication shop can only be operated by makerspace technicians.",
-            "beaconMinorVal": "105391",
-            "beaconMajorVal": "113053",
+            "beaconMinorVal": "",
+            "beaconMajorVal": "",
             "photos":[
                 {
                     "path": "Microfactory1",
@@ -105,8 +105,8 @@
             "name": "Venture Lab",
             "roomNumber": "260",
             "information": "The second floor also houses the UC Venture Lab, an accelerator that helps students, faculty and staff rapidly develops startup ideas in order to attract investors. Entrepreneurs in Residence (EIRs) at 1819 can provide guidance to startup teams if they see potential in the idea that’s being presented. From there the EIRs can give professional advice and assist the teams with finding the funding for their ideas.",
-            "beaconMinorVal": "",
-            "beaconMajorVal": "",
+            "beaconMinorVal": "17380",
+            "beaconMajorVal": "26346",
             "photos":[
                 {
                     "path": "VentureLab1",
@@ -250,8 +250,8 @@
             "name": "Urban Futures",
             "roomNumber": "335",
             "information": "The Simpson Center for Urban Futures, within UC’s College of Design, Architecture, Art, and Planning, supports the integration of visionary and interdisciplinary urban studies into curricula and provides scholarships and fellowships.",
-            "beaconMinorVal": "17380",
-            "beaconMajorVal": "26346",
+            "beaconMinorVal": "",
+            "beaconMajorVal": "",
             "photos":[
                 {
                     "path": "UrbanFutures1",
@@ -320,8 +320,8 @@
             "name": "Office of Innovation",
             "roomNumber": "460",
             "information": "The Office of Innovation was formed in 2017 when the University’s 30th president, Dr. Neville G. Pinto, completed a new strategic direction called “Next Lives Here” with an Innovation Agenda as one of its primary platforms. The Office of Innovation accelerates passion and ideas into working prototypes, startups, patents, industry partnerships, and community and global impact. The Association of Public and Land-Grant Universities (APLU) has included the University of Cincinnati in its list of IEP Designees since 2013. The IEP program recognizes institutions that have demonstrated a meaningful, ongoing and substantial commitment to economic and community development, growth, and economic opportunity. We achieve this at the 1819 Innovation Hub, the connecting place where UC meets the world and the world meets UC.",
-            "beaconMinorVal": "",
-            "beaconMajorVal": "",
+            "beaconMinorVal": "6011",
+            "beaconMajorVal": "28386",
             "photos":[
                 {
                     "path": "OfficeOfInnovation1",
@@ -341,8 +341,8 @@
             "name": "P&G UC Simulation Center ",
             "roomNumber": "440",
             "information": "The UC sim center is a collaboration between the University of Cincinnati and Proctor & Gamble. Backed by more than $13 million in investment by P&G, the Center’s collaborative teams of P&G employees and UC faculty and students give P&G access to talent and solutions while providing opportunities for students to work on more than 200 real-world industrial projects to date. The P&G-UC Simulation Center is credited with expediting solutions to critical commercial problems at a fraction of the cost of more traditional approaches and providing a larger recruiting pool for P&G.",
-            "beaconMinorVal": "6011",
-            "beaconMajorVal": "28386",
+            "beaconMinorVal": "",
+            "beaconMajorVal": "",
             "photos":[
                 {
                     "path": "PAndG1",
