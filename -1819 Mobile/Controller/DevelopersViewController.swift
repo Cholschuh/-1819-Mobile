@@ -10,14 +10,20 @@ import UIKit
 
 class DevelopersViewController: UIViewController {
     var arrayOfDevelopers:[developer] = [developer]()
-     var currentIndex: Int = 0
+    var currentIndex: Int = 0
+    var selectedIndex = -1
+    var isExpanded :Bool = false
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
         arrayOfDevelopers = developers().getData()
         tableView.reloadData()
+        tableView.estimatedRowHeight = 351
+        tableView.rowHeight = UITableView.automaticDimension
+
     }
     
     
@@ -35,13 +41,52 @@ extension DevelopersViewController: UITableViewDataSource, UITableViewDelegate {
         return UITableViewCell()
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 80
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+      if (self.selectedIndex == indexPath.row && isExpanded == true)
+            {
+                return 351
+            }
+      else {
+                return 128
+            }
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentIndex = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        if selectedIndex == indexPath.row
+
+        {
+
+        if self.isExpanded == false
+
+            {
+
+            self.isExpanded = true
+
+            }
+
+            else {
+
+            self.isExpanded = false
+
+            }
+
+        }
+
+        else {
+
+            self.isExpanded = true
+
+            
+
+        }
+
+        self.selectedIndex = indexPath.row
+
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+
         //        if selectedMenuOption == "Maps"{
         //            self.performSegue(withIdentifier: "goToMapView", sender: self)
         //        }else if selectedMenuOption == "Building Information"{
