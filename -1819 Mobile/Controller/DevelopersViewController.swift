@@ -9,25 +9,44 @@
 import UIKit
 
 class DevelopersViewController: UIViewController {
-var arrayOfDevelopers:[developer] = [developer]()
+    var arrayOfDevelopers:[developer] = [developer]()
+     var currentIndex: Int = 0
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-        
-        
+        arrayOfDevelopers = developers().getData()
+        tableView.reloadData()
     }
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+extension DevelopersViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayOfDevelopers.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "developerCell") as? developerCell{
+            cell.configureCell(developer: arrayOfDevelopers[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 80
+//    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentIndex = indexPath.row
+        tableView.deselectRow(at: indexPath, animated: true)
+        //        if selectedMenuOption == "Maps"{
+        //            self.performSegue(withIdentifier: "goToMapView", sender: self)
+        //        }else if selectedMenuOption == "Building Information"{
+        //            self.performSegue(withIdentifier: "goToRoomList", sender: self)
+        //        }
+        //
+    }
 }
