@@ -27,9 +27,13 @@ class DevelopersViewController: UIViewController {
 
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
     
 }
-extension DevelopersViewController: UITableViewDataSource, UITableViewDelegate {
+extension DevelopersViewController: UITableViewDataSource, UITableViewDelegate, UITextViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfDevelopers.count
     }
@@ -37,9 +41,13 @@ extension DevelopersViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "developerCell") as? developerCell{
             cell.configureCell(developer: arrayOfDevelopers[indexPath.row])
+            cell.cellTextView.layoutIfNeeded()
+            cell.cellTextView.setContentOffset(.zero, animated: false)
+            cell.cellTextView.scrollRectToVisible(CGRect.init(x: 0, y: 0, width: 1, height: 1), animated: false)
             return cell
         }
         return UITableViewCell()
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -87,12 +95,5 @@ extension DevelopersViewController: UITableViewDataSource, UITableViewDelegate {
         self.selectedIndex = indexPath.row
 
         tableView.reloadRows(at: [indexPath], with: .automatic)
-
-        //        if selectedMenuOption == "Maps"{
-        //            self.performSegue(withIdentifier: "goToMapView", sender: self)
-        //        }else if selectedMenuOption == "Building Information"{
-        //            self.performSegue(withIdentifier: "goToRoomList", sender: self)
-        //        }
-        //
     }
 }
