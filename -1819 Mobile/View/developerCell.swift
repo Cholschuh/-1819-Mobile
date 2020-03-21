@@ -20,6 +20,11 @@ class developerCell: UITableViewCell {
         nameLabel.text = developer.fullName
         cellTextView.text = developer.shortBio
         
+//        if cellTextView.contentOffset.y > 0 {
+//            cellTextView.contentOffset = CGPoint(x: 0, y: 0)
+//            // Or use scrollRectToVisible, scrollRangeToVisible, etc.
+//        }
+        
     }
     
 }

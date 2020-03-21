@@ -21,8 +21,9 @@ class DevelopersViewController: UIViewController {
         
         arrayOfDevelopers = developers().getData()
         tableView.reloadData()
-        tableView.estimatedRowHeight = 351
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 351
+        
 
     }
     
