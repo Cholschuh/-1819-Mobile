@@ -87,7 +87,7 @@
         {
             "name": "Fifth Third Innovation Hub",
             "roomNumber": "250",
-            "information": "Coming Soon! Fifth Third bank is currently in the process of constructing their innovation hub office within 1819 as well.",
+            "information": "Downtown Cincinnati-based Fifth Third, the nation’s ninth-largest U.S.-based consumer bank, has moved some of its IT staff to the Innovation Hub. It will also have some members of its innovation, digital and other teams regularly use the Innovation Hub space to work with UC students and faculty as well as industry partners.  \"Our focus is on enabling organizations that partner with us to be the envy of the world by connecting them with the talent needed to innovate\" said David J. Adams UC’s chief innovation officer.  \"We are very excited to have the opportunity to deliver meaningful value to Fifth Third.\"",
             "beaconMinorVal": "",
             "beaconMajorVal": "",
             "photos":[
@@ -118,6 +118,23 @@
                 },
                 {
                     "path": "VentureLab3",
+                    "altText": "This is a photo of a flower"
+                }
+            ]
+        },
+        {
+            "name": "Homeshake",
+            "roomNumber": "210A",
+            "information": "Homeshake started in Cincinnati with a team of real estate professionals and creative technologists who came together to create a better way to browse, buy, and sell homes. Homeshake broke the rules, raised the bar, and changed the game with one goal in mind: customer experience.",
+            "beaconMinorVal": "",
+            "beaconMajorVal": "",
+            "photos":[
+                {
+                    "path": "Homeshake1",
+                    "altText": "This is a photo of a flower"
+                },
+                {
+                    "path": "Homeshake2",
                     "altText": "This is a photo of a flower"
                 }
             ]
