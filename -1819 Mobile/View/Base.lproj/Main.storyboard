@@ -280,14 +280,14 @@
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemCell" id="Lk4-kJ-UoX" customClass="menuItemCell" customModule="_819_Mobile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="49"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="49.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lk4-kJ-UoX" id="SFQ-gI-HGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icr-Zj-Ic7">
-                                                    <rect key="frame" x="20" y="11" width="344" height="27"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="344" height="27.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-ExtraBold" family="Open Sans" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -346,14 +346,14 @@
             <objects>
                 <viewController title="Requesting Permissions" id="6uu-wv-eg5" customClass="LocationAuthViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ts-5n-aY9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tools - maker" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-QK-w5R" userLabel="backgroundImg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuthReqInfoGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-il-xyU">
-                                <rect key="frame" x="37" y="153" width="340" height="291"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HowToEnable" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-il-xyU">
+                                <rect key="frame" x="37" y="13" width="340" height="291"/>
                                 <accessibility key="accessibilityConfiguration" label="A person with a mobile device standing infront of a beacon.">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -362,7 +362,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-2A-ByD">
-                                <rect key="frame" x="20" y="790" width="374" height="60"/>
+                                <rect key="frame" x="20" y="736" width="374" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="vD0-d3-IYl"/>
@@ -375,7 +375,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-W1-9lG">
-                                <rect key="frame" x="20" y="452" width="374" height="172"/>
+                                <rect key="frame" x="20" y="312" width="374" height="172"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="172" id="OHY-Lr-lIl"/>
                                 </constraints>
@@ -525,23 +525,26 @@
             <objects>
                 <viewController title="Beacon Discovery" id="hB5-v5-IcW" customClass="BeaconDiscoveryViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mq0-2j-4YY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wires 2 - proably nothing" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-A2-ozu" userLabel="backgroundImg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Discovery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-qj-QmM">
-                                <rect key="frame" x="134.33333333333337" y="436" width="145.66666666666663" height="24.333333333333314"/>
+                                <rect key="frame" x="137.66666666666666" y="410.66666666666669" width="138.99999999999997" height="21"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="big beacon" translatesAutoresizingMaskIntoConstraints="NO" id="R4Y-m5-lta">
-                                <rect key="frame" x="87" y="340" width="240" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiscoveryBeacon" translatesAutoresizingMaskIntoConstraints="NO" id="R4Y-m5-lta">
+                                <rect key="frame" x="87" y="313" width="240" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="vLH-5z-DKW"/>
+                                    <constraint firstAttribute="width" constant="240" id="vXz-Rb-weh"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -549,8 +552,10 @@
                             <constraint firstItem="RSo-A2-ozu" firstAttribute="trailing" secondItem="Mq0-2j-4YY" secondAttribute="trailing" id="4gC-ft-I6m"/>
                             <constraint firstItem="QPx-qj-QmM" firstAttribute="centerX" secondItem="Mq0-2j-4YY" secondAttribute="centerX" id="BwZ-KW-dkT"/>
                             <constraint firstItem="QPx-qj-QmM" firstAttribute="centerY" secondItem="Mq0-2j-4YY" secondAttribute="centerY" id="M2l-kI-qBH"/>
+                            <constraint firstItem="R4Y-m5-lta" firstAttribute="centerY" secondItem="Mq0-2j-4YY" secondAttribute="centerY" id="Udf-ez-f5d"/>
                             <constraint firstItem="RSo-A2-ozu" firstAttribute="top" secondItem="Mq0-2j-4YY" secondAttribute="top" id="WDA-ob-bBt"/>
                             <constraint firstAttribute="bottom" secondItem="RSo-A2-ozu" secondAttribute="bottom" id="WNz-rf-m4s"/>
+                            <constraint firstItem="R4Y-m5-lta" firstAttribute="centerX" secondItem="Mq0-2j-4YY" secondAttribute="centerX" id="YaK-3q-SOz"/>
                             <constraint firstItem="RSo-A2-ozu" firstAttribute="leading" secondItem="Mq0-2j-4YY" secondAttribute="leading" id="kWT-dg-SPP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xv4-Gl-XMQ"/>
@@ -572,14 +577,14 @@
             <objects>
                 <viewController title="Check Network" id="2aV-od-fFj" customClass="CheckNetworkViewController" customModule="_819_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TIb-YR-9MP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spire - any view" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-0Y-1Jz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" translatesAutoresizingMaskIntoConstraints="NO" id="hIR-mf-5kk">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <rect key="frame" x="87" y="357" width="240" height="128"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="8Ce-ig-jLl"/>
@@ -587,7 +592,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please connect to the internet to use this feature. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeF-oC-aCb">
-                                <rect key="frame" x="20" y="267" width="374" height="44"/>
+                                <rect key="frame" x="20" y="240" width="374" height="44"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1013,12 +1018,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AuthReqInfoGraphic" width="291.66665649414062" height="291.66665649414062"/>
         <image name="BG1 blur" width="1242" height="2688"/>
         <image name="Building 3" width="621" height="1344"/>
+        <image name="DiscoveryBeacon" width="643.66668701171875" height="643.66668701171875"/>
         <image name="FloorMapKey" width="375" height="500"/>
+        <image name="HowToEnable" width="312.33334350585938" height="312.33334350585938"/>
         <image name="Main 2" width="1242" height="2688"/>
-        <image name="big beacon" width="350" height="350"/>
         <image name="colors - maker" width="621" height="1344"/>
         <image name="spire - any view" width="621" height="1344"/>
         <image name="steps - floors" width="621" height="1344"/>
@@ -1029,9 +1034,9 @@
         <image name="x" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XjB-vs-h59"/>
-        <segue reference="nTk-wC-RN5"/>
-        <segue reference="4B8-S6-EKK"/>
+        <segue reference="QCf-PL-kVf"/>
+        <segue reference="fsj-8q-bqk"/>
+        <segue reference="cVn-m1-BBJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

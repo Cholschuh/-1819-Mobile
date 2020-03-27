@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Pre Beacon Searching copy.png",
+      "filename" : "DiscoveryBeacon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Pre Beacon Searching copy@2x.png",
+      "filename" : "DiscoveryBeacon@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Pre Beacon Searching copy@3x.png",
+      "filename" : "DiscoveryBeacon@3x.png",
       "scale" : "3x"
     }
   ],
