@@ -11,7 +11,7 @@ import KontaktSDK
 
 class LocationAuthViewController: UIViewController, KTKBeaconManagerDelegate{
     var seguedFromBeaconDiscovReq: Bool = false
-   
+    
     @IBOutlet weak var enableLocAuthBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class LocationAuthViewController: UIViewController, KTKBeaconManagerDelegate{
             removePreviousViewControllerFromStack()
             seguedFromBeaconDiscovReq = false
         }
-
+        
     }
     
     /// initialize beacon manager
@@ -60,6 +60,15 @@ extension LocationAuthViewController{
         }else if status == .denied || status == .restricted{
             //Change picture
             //Change text label
+            let alert = UIAlertController(title: "Location Services Alert!", message: "\nYou have chose to not allow Location Services for this app.\n\nTo allow Location Services start by selecting the \"Settings\" option below. From the 1819 Mobile Settings page select the Location setting and change it from \"Never\" to \"Always\" or \"While using the App\". \n\nTo return to the 1819 Mobile app, select ◀︎ 1819 Mobile in the top right hand corner of the screen.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Settings", style: .default, handler:  {action in
+                // open the app permission in Settings app
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
         }
     }
     
