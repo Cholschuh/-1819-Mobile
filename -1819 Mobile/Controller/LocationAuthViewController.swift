@@ -58,8 +58,6 @@ extension LocationAuthViewController{
         if status == .authorizedAlways || status == .authorizedWhenInUse{
             self.performSegue(withIdentifier: "goToBeaconDiscovery", sender:self)
         }else if status == .denied || status == .restricted{
-            //Change picture
-            //Change text label
             let alert = UIAlertController(title: "Location Services Alert!", message: "\nYou have chose to not allow Location Services for this app.\n\nTo allow Location Services start by selecting the \"Settings\" option below. From the 1819 Mobile Settings page select the Location setting and change it from \"Never\" to \"Always\" or \"While using the App\". \n\nTo return to the 1819 Mobile app, select ◀︎ 1819 Mobile in the top right hand corner of the screen.", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Settings", style: .default, handler:  {action in
