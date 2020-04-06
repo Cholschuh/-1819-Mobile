@@ -214,6 +214,9 @@
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FloorMapKey" translatesAutoresizingMaskIntoConstraints="NO" id="IiC-38-x9a">
                                         <rect key="frame" x="259" y="130" width="133" height="160"/>
+                                        <accessibility key="accessibilityConfiguration" label="Floor Map Key">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="133" id="URi-Hm-3Se"/>
                                             <constraint firstAttribute="height" constant="160" id="cjY-8Z-phK"/>
@@ -280,14 +283,14 @@
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemCell" id="Lk4-kJ-UoX" customClass="menuItemCell" customModule="_819_Mobile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="49.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="49.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lk4-kJ-UoX" id="SFQ-gI-HGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icr-Zj-Ic7">
-                                                    <rect key="frame" x="20" y="10.999999999999998" width="344" height="27.333333333333329"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="344" height="27.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-ExtraBold" family="Open Sans" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -353,7 +356,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HowToEnable" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-il-xyU">
-                                <rect key="frame" x="37" y="13" width="340" height="291"/>
+                                <rect key="frame" x="37" y="13" width="340.00000000000006" height="291.00000000000006"/>
                                 <accessibility key="accessibilityConfiguration" label="A person with a mobile device standing infront of a beacon.">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -532,7 +535,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Discovery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPx-qj-QmM">
-                                <rect key="frame" x="137.66666666666666" y="410.66666666666669" width="138.99999999999997" height="21"/>
+                                <rect key="frame" x="134.33333333333337" y="409" width="145.66666666666663" height="24.333333333333314"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -541,6 +544,9 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiscoveryBeacon" translatesAutoresizingMaskIntoConstraints="NO" id="R4Y-m5-lta">
                                 <rect key="frame" x="87" y="313" width="240" height="216"/>
+                                <accessibility key="accessibilityConfiguration" label="Picture of a 1819 Mobile Beacon">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="vLH-5z-DKW"/>
                                     <constraint firstAttribute="width" constant="240" id="vXz-Rb-weh"/>
@@ -584,15 +590,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" translatesAutoresizingMaskIntoConstraints="NO" id="hIR-mf-5kk">
-                                <rect key="frame" x="87" y="357" width="240" height="128"/>
+                                <rect key="frame" x="87" y="357" width="240" height="128.00000000000011"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="No wifi symbol">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="8Ce-ig-jLl"/>
                                     <constraint firstAttribute="width" constant="240" id="TKx-S5-4sM"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please connect to the internet to use this feature. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeF-oC-aCb">
-                                <rect key="frame" x="20" y="240" width="374" height="44"/>
+                                <rect key="frame" x="20" y="232.66666666666666" width="374" height="51.333333333333343"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -651,6 +660,7 @@
                                         <rect key="frame" x="20" y="50" width="304" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" label="Name Text Field"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="304" id="PB3-rk-PR7"/>
                                             <constraint firstAttribute="height" constant="34" id="cOl-gQ-7LE"/>
@@ -690,6 +700,7 @@
                                         <rect key="frame" x="20" y="151" width="304" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" label="Preferred Email Address Field"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="304" id="Qki-vT-p8a"/>
                                             <constraint firstAttribute="height" constant="34" id="X2o-k0-SbL"/>

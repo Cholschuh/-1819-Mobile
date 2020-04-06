@@ -11,15 +11,15 @@
             "photos":[
                 {
                     "path": "1819_1",
-                    "altText": "This is a photo of Oranges"
+                    "altText": "This is a photo of the outside of 1819 Innovation Hub building,"
                 },
                 {
                     "path": "1819_2",
-                    "altText": "This is a photo of a Building"
+                    "altText": "This is a photo of the fourth floor hallway of the 1819 building."
                 },
                 {
                     "path": "1819_3",
-                    "altText": "This is a photo of a Library"
+                    "altText": "This is a photo of the second floor hallway of the 1819 building."
                 }
             ]
         },
@@ -32,19 +32,19 @@
             "photos":[
                 {
                     "path": "Makerspace1",
-                    "altText": "This is a photo of 1819 Makerspace's Laser Cutters"
+                    "altText": "This is a photo of students working in the laser cutting area of the 1819 Makerspace."
                 },
                 {
                     "path": "Makerspace2",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of a Ultimaker 3D Printer in the 1819 Makerspace."
                 },
                 {
                     "path": "Makerspace3",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of laser cut fossils and other items."
                 },
                 {
                     "path": "Makerspace4",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of a laser cutter."
                 }
             ]
         },
@@ -57,7 +57,7 @@
             "photos":[
                 {
                     "path": "MakerspaceLobby1",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of the Makerspace lobby."
                 }
             ]
         },
@@ -70,11 +70,11 @@
             "photos":[
                 {
                     "path": "Microfactory1",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of the wood CNC machine located in the Microfactory."
                 },
                 {
                     "path": "Microfactory2",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of a the water jet table located in the Microfactory."
                 }
             ]
         }
@@ -93,11 +93,11 @@
             "photos":[
                 {
                     "path": "FithThird1",
-                    "altText": "This is a photo of the room 1"
+                    "altText": "This is a photo of the Fifth Third Innovation Hub's office."
                 },
                 {
                     "path": "FithThird2",
-                    "altText": "This is a photo of the room 1 partner logo"
+                    "altText": "This is a photo of Firth Thirds's logo on their office window."
                 }
             ]
         },
@@ -110,15 +110,15 @@
             "photos":[
                 {
                     "path": "VentureLab1",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of the left side of the venture lab."
                 },
                 {
                     "path": "VentureLab2",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of the conference table in the middle of the venture lab."
                 },
                 {
                     "path": "VentureLab3",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of the right side of the venture lab."
                 }
             ]
         },
@@ -131,11 +131,11 @@
             "photos":[
                 {
                     "path": "Homeshake1",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo Homeshake's office."
                 },
                 {
                     "path": "Homeshake2",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of Homeshake's logo on their office window."
                 }
             ]
         },
@@ -148,19 +148,19 @@
             "photos":[
                 {
                     "path": "ModClassrooms1",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of the multi-use space."
                 },
                 {
                     "path": "ModClassrooms2",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of a small modular classroom."
                 },
                 {
                     "path": "ModClassrooms3",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is a photo of the large modular classroom."
                 },
                 {
                     "path": "ModClassrooms4",
-                    "altText": "This is a photo of a flower"
+                    "altText": "This is another photo of the large modular classroom at a diffrent angle."
                 }
             ]
         }
@@ -179,7 +179,7 @@
             "photos":[
                 {
                     "path": "Kroger1",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Kroger's office looking through the window."
                 }
             ]
         },
@@ -192,11 +192,11 @@
             "photos":[
                 {
                     "path": "CincyInsurance1",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Cincinnati Insurance's logo on their office window."
                 },
                 {
                     "path": "CincyInsurance2",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Cincinnati Insurance's office looking through the window."
                 }
             ]
         },
@@ -209,15 +209,15 @@
             "photos":[
                 {
                     "path": "Kingsgate1",
-                    "altText": "This is a photo of Kingsgate office wall logo."
+                    "altText": "This is a photo of Kingsgate's office wall logo."
                 },
                 {
                     "path": "Kingsgate2",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Kingsgate's confrence room."
                 },
                 {
                     "path": "Kingsgate3",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Kingsgate's office looking through the window."
                 }
             ]
         },
@@ -230,11 +230,11 @@
             "photos":[
                 {
                     "path": "livewell1",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of livewell's logo on their office window."
                 },
                 {
                     "path": "livewell2",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of livewell's office information media displays."
                 }
             ]
         },
@@ -247,19 +247,19 @@
             "photos":[
                 {
                     "path": "VillageLife1",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Village Life's logo on their office window."
                 },
                 {
                     "path": "VillageLife2",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Village Life's office table."
                 },
                 {
                     "path": "VillageLife3",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Village Life's lounge area."
                 },
                 {
                     "path": "VillageLife4",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of a wall in Village Life's office that contains shevles of art sculptures."
                 }
             ]
         },
@@ -272,11 +272,11 @@
             "photos":[
                 {
                     "path": "UrbanFutures1",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Urban Futures's logo on their office window."
                 },
                 {
                     "path": "UrbanFutures2",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Urban Futures's office looking through the window."
                 }
             ]
         },
@@ -289,7 +289,7 @@
             "photos":[
                 {
                     "path": "CincinnatiBell1",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Cincinnati Bell's logo on their office window."
                 }
             ]
         }
@@ -308,11 +308,11 @@
             "photos":[
                 {
                     "path": "CincyTech1",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Cincytech's logo on their office window."
                 },
                 {
                     "path": "CincyTech2",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Cincytech's office looking through the window."
                 }
             ]
         },
@@ -325,11 +325,11 @@
             "photos":[
                 {
                     "path": "FIS1",
-                    "altText": "This is a photo of Fidelity Information Services logo located on their office's window."
+                    "altText": "This is a photo of Fidelity Information Services's logo located on their office's window."
                 },
                 {
                     "path": "FIS2",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of Fidelity Information Services's office looking through the window."
                 }
             ]
         },
@@ -342,15 +342,15 @@
             "photos":[
                 {
                     "path": "OfficeOfInnovation1",
-                    "altText": "This is a photo of Fidelity Information Services logo located on their office's window."
+                    "altText": "This is a photo of wall art located in the Office of Innovation's waiting area."
                 },
                 {
                     "path": "OfficeOfInnovation2",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of staff cubicles in the Office of Innovation."
                 },
                 {
                     "path": "OfficeOfInnovation3",
-                    "altText": "This is a photo of Fidelity Information Services logo located on their office's window."
+                    "altText": "This is a photo of the Office of Innovation's conference tower room."
                 }
             ]
         },
@@ -363,15 +363,15 @@
             "photos":[
                 {
                     "path": "PAndG1",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of P&G's logo located on their office's window."
                 },
                 {
                     "path": "PAndG2",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of the right side of P&G's UC Simulation Center."
                 },
                 {
                     "path": "PAndG3",
-                    "altText": "This is a photo of a Flower"
+                    "altText": "This is a photo of P&G's UC Simulation Center lobby."
                 }
             ]
         }
